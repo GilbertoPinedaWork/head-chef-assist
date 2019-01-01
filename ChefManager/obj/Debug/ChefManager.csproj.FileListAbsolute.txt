@@ -1,0 +1,6 @@
+C:\Users\pined\Documents\Code\CHEF\ChefManager\bin\Debug\ChefManager.exe
+C:\Users\pined\Documents\Code\CHEF\ChefManager\bin\Debug\ChefManager.pdb
+C:\Users\pined\Documents\Code\CHEF\ChefManager\obj\Debug\ChefManager.csprojAssemblyReference.cache
+C:\Users\pined\Documents\Code\CHEF\ChefManager\obj\Debug\ChefManager.csproj.CoreCompileInputs.cache
+C:\Users\pined\Documents\Code\CHEF\ChefManager\obj\Debug\ChefManager.exe
+C:\Users\pined\Documents\Code\CHEF\ChefManager\obj\Debug\ChefManager.pdb
