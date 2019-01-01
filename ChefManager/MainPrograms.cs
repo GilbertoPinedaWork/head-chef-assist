@@ -13,7 +13,7 @@ namespace ChefManager
         //TODO VERIFY ERROR HANDLING
         //TODO ENCRYPTION
         //TODO GENERALIZE AS MUCH A POSSIBLE 
-        //TODO Better Organize The Functions in file Conversions
+        
         //TODO Separate Generic Functions from IngredientSpecific Functions in conversions.cs
         //TODO Develop Recipe Manager
        
