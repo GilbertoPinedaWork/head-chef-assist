@@ -6,18 +6,15 @@ namespace ChefManager
     public class GenericManagerMethods
     {
 
-        public  double ForceInputNumber()//use .ToX to change to float int 
+        public  int NumberOnlyInput(string input)//use .ToX to change to float int 
         {
-            double answer = 0;
-            bool notANumber = true;
-            do
-            {
-                notANumber = !double.TryParse(Console.ReadLine(), out answer);
-            } while (notANumber);
-
-            return answer;
+            bool aNumber = int.TryParse(input, out var answer);
+            if (aNumber == false)
+               return -1;
+            
+               return answer;
         }
-        public  double ForceInputNumber(string message)//use .ToX to change to float int //clear before message
+        public  double NumberOnlyInput(string input, string message)//use .ToX to change to float int //clear before message
         {
             double answer =-1;
             bool notANumber = true;

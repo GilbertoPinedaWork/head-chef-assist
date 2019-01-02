@@ -12,12 +12,18 @@
       <e p="MainPrograms.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="packages.config" t="Include" />
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="AssemblyInfo.cs" t="Include" />
       </e>
       <e p="RecipeInfo.cs" t="Include" />
       <e p="RecipeManagerMethodscs.cs" t="Include" />
+      <e p="UnitTests" t="Include">
+        <e p="GenericManagerMethods" t="Include">
+          <e p="NumberOnlyInputTest.cs" t="Include" />
+        </e>
+      </e>
     </e>
   </component>
 </project>

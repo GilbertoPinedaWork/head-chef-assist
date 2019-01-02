@@ -8,18 +8,10 @@ namespace ChefManager
 
     public class MainPrograms
     {
-        //TODO Console Formmatting
-        //TODO UNIT TEST FOR NEW FUNCTIONS
-        //TODO VERIFY ERROR HANDLING
+
         //TODO ENCRYPTION
-        //TODO GENERALIZE AS MUCH A POSSIBLE 
-        //TODO Better Organize The Functions in file Conversions
-        //TODO Separate Generic Functions from IngredientSpecific Functions in conversions.cs
-        //TODO Develop Recipe Manager
-       
-        //TODO Creat a Main which containss IM Main and RM Main
         // TODO Refactor
-        //TODO Alfabethical Sort Function, Console Interface, Check For File Existence, encryption, savechanges funtion
+        //TODO  Check For File Existence,
        
 
         public void IngredientManagerMain()

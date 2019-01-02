@@ -4,3 +4,13 @@ C:\Users\pined\Documents\Code\CHEF\ChefManager\obj\Debug\ChefManager.csprojAssem
 C:\Users\pined\Documents\Code\CHEF\ChefManager\obj\Debug\ChefManager.csproj.CoreCompileInputs.cache
 C:\Users\pined\Documents\Code\CHEF\ChefManager\obj\Debug\ChefManager.exe
 C:\Users\pined\Documents\Code\CHEF\ChefManager\obj\Debug\ChefManager.pdb
+C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager\bin\Debug\ChefManager.exe
+C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager\bin\Debug\ChefManager.pdb
+C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager\obj\Debug\ChefManager.csprojAssemblyReference.cache
+C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager\obj\Debug\ChefManager.csproj.CoreCompileInputs.cache
+C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager\obj\Debug\ChefManager.exe
+C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager\obj\Debug\ChefManager.pdb
+C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager\bin\Debug\nunit.framework.dll
+C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager\bin\Debug\nunit.framework.pdb
+C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager\bin\Debug\nunit.framework.xml
+C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager\obj\Debug\ChefManager.csproj.CopyComplete
