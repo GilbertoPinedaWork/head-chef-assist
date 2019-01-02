@@ -8,18 +8,10 @@ namespace ChefManager
 
     public class MainPrograms
     {
-        
-       
-        
-        //TODO ENCRYPTION
-        //TODO GENERALIZE AS MUCH A POSSIBLE 
-        
 
-        //TODO Develop Recipe Manager
-       
-       
+        //TODO ENCRYPTION
         // TODO Refactor
-        //TODO Alfabethical Sort Function, Console Interface, Check For File Existence, encryption, savechanges funtion
+        //TODO  Check For File Existence,
        
 
         public void IngredientManagerMain()

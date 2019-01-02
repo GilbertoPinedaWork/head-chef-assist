@@ -30,7 +30,9 @@ namespace ChefManager
           var mainCaller =  new MainPrograms();
           var genericMethods = new GenericManagerMethods();
           FileInfo flag = new FileInfo("FirtsLoad.txt");
-            if (flag.Length == 0)
+            
+            
+            if (!flag.Exists)
             {
                 CreateNeccesaryFiles();
 
