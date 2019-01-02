@@ -74,7 +74,7 @@ namespace  ChefManager
             tempString += (newIngredient.MeasurementUnit+"\nIngredient Description: ");
             Console.Clear();
             Console.Write(tempString);
-            newIngredient.SetDescription();
+            newIngredient.SetDescription(Console.ReadLine());//TODO LOOP
             
             list.Add(newIngredient);
             
@@ -105,10 +105,14 @@ namespace  ChefManager
             ViewIngredientList(list);
            
             
-            Console.Write("Write the Number of the Ingredients which details you wish to see: ");
+           
             int answer = -1;
-            while(answer<0 || answer>list.Count-1)
+            while (answer < 0 || answer > list.Count - 1)
+            {
                 answer = Convert.ToInt32(NumberOnlyInput(Console.ReadLine()));
+                Console.Clear();
+                Console.Write("Write the Number of the Ingredients which details you wish to see: ");
+            }
             
             Console.Clear();
             Console.WriteLine("Name: "+list[answer].Name);
