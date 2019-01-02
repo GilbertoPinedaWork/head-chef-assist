@@ -22,7 +22,7 @@ namespace ChefManager
         public void ViewRecipeDetails(List<RecipeInfo> recipeList)
         {
             string tempString = GetRecipeNames(recipeList)+"\nWrite the Number of the Recipe to View Details";
-            int answer = Convert.ToInt32(NumberOnlyInput(tempString)-1);
+            int answer = Convert.ToInt32(ForceInputNumber(tempString)-1);
 
             Console.WriteLine(recipeList[answer].Name);
             Console.WriteLine("For" +recipeList[answer].Servings + "Servings");
@@ -34,7 +34,7 @@ namespace ChefManager
             var newRecipe = new RecipeInfo {Name = Console.ReadLine() };
             tempString += newRecipe.Name;
             tempString += "\nServings:";
-            newRecipe.Servings = Convert.ToInt32(NumberOnlyInput(tempString));
+            newRecipe.Servings = Convert.ToInt32(ForceInputNumber(tempString));
         }
     }
 }

@@ -6,13 +6,6 @@ Initially I started this project locally but then decided this could be an oppor
 to Learn How to Use GitHub.
 C#
 
-The Focal Point Of This Project is to manage and create recipes and ingredients,
-and to standarize recipes.
-
-After this is done there will be future upgrades
-
-The author of this project does not know much about github so if contributing be patient
-
 
 
 

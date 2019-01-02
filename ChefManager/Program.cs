@@ -30,9 +30,7 @@ namespace ChefManager
           var mainCaller =  new MainPrograms();
           var genericMethods = new GenericManagerMethods();
           FileInfo flag = new FileInfo("FirtsLoad.txt");
-            
-            
-            if (!flag.Exists)
+            if (flag.Length == 0)
             {
                 CreateNeccesaryFiles();
 
@@ -45,7 +43,7 @@ namespace ChefManager
             int input;
             do
             {
-              input =  (int)genericMethods.NumberOnlyInput
+              input =  (int)genericMethods.ForceInputNumber
               ("\tWelcome To Chef Manager"+
                "\n1 = Ingredient Manager" +
                "\n2 = Recipe Manager"+
