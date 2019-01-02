@@ -14,7 +14,7 @@ namespace  ChefManager
             
             int answer = -1;
             while(answer<0 || answer>list.Count-1)
-                answer = Convert.ToInt32(ForceInputNumber(IngredientInfo.GetIngredientNames(list)+
+                answer = Convert.ToInt32(NumberOnlyInput(IngredientInfo.GetIngredientNames(list)+
                          "\nWrite the Number of the Ingredient You Wish to Modify : "));
             
             var newIngredient = list[answer];
@@ -31,10 +31,10 @@ namespace  ChefManager
             tempString = ("Ingredient Name: " + newIngredient.Name +
                           "\nIngredient Cost $");
             
-            newIngredient.Cost = ForceInputNumber(tempString);
+            newIngredient.Cost = NumberOnlyInput(tempString);
 
             tempString += (newIngredient.Cost+"\nIngredient Yield: ");
-            newIngredient.Yield = ForceInputNumber(tempString);
+            newIngredient.Yield = NumberOnlyInput(tempString);
 
             tempString += (newIngredient.Yield + "\nIngredient Unit: ");
             Console.Write("Ingredient Unit: ");//TODO Restrict Unit
@@ -62,10 +62,10 @@ namespace  ChefManager
             tempString = ("Ingredient Name: " + newIngredient.Name +
                           "\nIngredient Cost $");
             
-            newIngredient.Cost = ForceInputNumber(tempString);
+            newIngredient.Cost = NumberOnlyInput(tempString);
 
             tempString += (newIngredient.Cost+"\nIngredient Yield: ");
-            newIngredient.Yield = ForceInputNumber(tempString);
+            newIngredient.Yield = NumberOnlyInput(tempString);
 
             tempString += (newIngredient.Yield + "\nIngredient Unit: ");
             Console.Write("Ingredient Unit: ");//TODO Restrict Unit
@@ -85,7 +85,7 @@ namespace  ChefManager
             Console.Write("Write The Number of the Ingredient you Wish to Delete:");
             int answer = -1;
             while(answer<0 || answer>list.Count-1)
-                answer = Convert.ToInt32(ForceInputNumber());
+                answer = Convert.ToInt32(NumberOnlyInput(Console.ReadLine()));
             
             Console.WriteLine("Are you Sure you want to delete? This action cannot be undone");
             Console.WriteLine("Yes or No?");
@@ -108,7 +108,7 @@ namespace  ChefManager
             Console.Write("Write the Number of the Ingredients which details you wish to see: ");
             int answer = -1;
             while(answer<0 || answer>list.Count-1)
-                answer = Convert.ToInt32(ForceInputNumber());
+                answer = Convert.ToInt32(NumberOnlyInput(Console.ReadLine()));
             
             Console.Clear();
             Console.WriteLine("Name: "+list[answer].Name);

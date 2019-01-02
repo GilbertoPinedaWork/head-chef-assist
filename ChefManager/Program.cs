@@ -45,7 +45,7 @@ namespace ChefManager
             int input;
             do
             {
-              input =  (int)genericMethods.ForceInputNumber
+              input =  (int)genericMethods.NumberOnlyInput
               ("\tWelcome To Chef Manager"+
                "\n1 = Ingredient Manager" +
                "\n2 = Recipe Manager"+
