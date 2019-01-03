@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ContentModelStore">
 <<<<<<< DevelopBckUp
+<<<<<<< DevelopBckUp
     <e p="C:\Users\pined\.Rider2018.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\pined\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_ChefManager.1377356502.00" t="ExcludeRecursive" />
+=======
+    <e p="C:\Users\pined\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_ChefManager.1377356502.00" t="ExcludeRecursive" />
+>>>>>>> some random xml file adde
     <e p="C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager" t="IncludeRecursive">
       <e p="_ProgramRoot.cs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
@@ -38,11 +42,14 @@
           <e p="ToFile.cs" t="Include" />
         </e>
       </e>
+<<<<<<< DevelopBckUp
 =======
     <e p="C:\Users\pined\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_ChefManager.1377356502.00" t="ExcludeRecursive" />
     <e p="C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager" t="IncludeFlat">
       <e p="ChefManager.sln" t="IncludeFlat" />
 >>>>>>> ??
+=======
+>>>>>>> some random xml file adde
     </e>
   </component>
 </project>
