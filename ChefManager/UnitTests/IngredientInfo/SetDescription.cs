@@ -5,7 +5,7 @@ using NUnit.Framework;
 public class SetDescriptionTest
 {
     [Test]
-    public void ReceiveOneLineInput()
+    public void Receive_One_Line_Input()
     {
         var ingredient = new IngredientInfo();
         string description = "A Fresh Tasty Ingredient";
@@ -16,7 +16,7 @@ public class SetDescriptionTest
     }
     
     [Test]
-    public void ReceiveMultiLineInput()
+    public void Receive_MultiLine_Input()
     {
         var ingredient = new IngredientInfo();
         string[] multlineDescription = {"A Tasty, ","Fresh Ingredient","" };
@@ -25,7 +25,6 @@ public class SetDescriptionTest
         for (int i = 1; i < multlineDescription.Length; i++)
         {
             ingredient.SetDescription(multlineDescription[i],temp);
-            
         }
         
         Assert.AreEqual("A Tasty, Fresh Ingredient",ingredient.Description);

@@ -4,10 +4,10 @@ using ChefManager;
 using NUnit.Framework;
 
 [TestFixture]
-public class WritePropertiesToFileTest
+public class IngredientToFileTest
 {
     [Test]
-    public void IngredientToFile()
+    public void Default_Ingredient_Received()
     {
         var ingredient = new IngredientInfo
         {   Cost = 5,
@@ -17,19 +17,17 @@ public class WritePropertiesToFileTest
             MeasurementUnit = "g",
             Quantity = 1
         };
-        using (MemoryStream mstream = new MemoryStream())
+        using (StreamWriter swriter = new StreamWriter("TestFile.tst"))
         {
-            
+            swriter.Write("Coal\n5\n.3\ng\n1\nA Fresh Coal");
+        }  
             IngredientInfo.IngredientToFile(ingredient, destination);
-
-            Assert()
+        
+        using (StreamReader destinationReader = new StreamReader(ingredient.Name + ".ing"))
+        using(StreamReader expectedReader = new StreamReader("TestFile.tst"))
+        {
+            Assert.Equals(expectedReader.ReadToEnd(), destinationReader.ReadToEnd());
         }
-    }
-        
-    [Test]
-    public void NullProperties()
-    {
-        
-    }
-    
+    }   
 }
+    
