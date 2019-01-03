@@ -78,10 +78,10 @@ namespace ChefManager
             int index = 0;
             foreach (var ingredient in list)
             {
-                index = list.IndexOf(ingredient); 
-                target+= ("\n"+index+") "+ ingredient.Name);
+                index = list.IndexOf(ingredient)+1; 
+                target+= (index+") "+ ingredient.Name);
+                target += "\n";
             }
-
             return target;
         }
     }
