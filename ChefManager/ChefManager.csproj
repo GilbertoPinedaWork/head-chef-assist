@@ -52,6 +52,7 @@
     <Compile Include="RecipeInfo.cs" />
     <Compile Include="RecipeManagerMethodscs.cs" />
     <Compile Include="UnitTests\GenericManagerMethods\NumberOnlyInputTest.cs" />
+    <Compile Include="UnitTests\IngredientInfo\GetIngredientNames.cs" />
     <Compile Include="UnitTests\IngredientInfo\ReadIngredientFromFile.cs" />
     <Compile Include="UnitTests\IngredientInfo\SetDescription.cs" />
     <Compile Include="UnitTests\IngredientInfo\IngredientToFile.cs" />
