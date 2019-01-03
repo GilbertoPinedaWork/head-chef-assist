@@ -53,6 +53,7 @@
     <Compile Include="RecipeManagerMethodscs.cs" />
     <Compile Include="UnitTests\GenericManagerMethods\NumberOnlyInputTest.cs" />
     <Compile Include="UnitTests\IngredientInfo\SetDescription.cs" />
+    <Compile Include="UnitTests\IngredientInfo\WritePropertiesToFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

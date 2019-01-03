@@ -22,7 +22,7 @@ public class SetDescriptionTest
         string[] multlineDescription = {"A Tasty, ","Fresh Ingredient","" };
 
         string temp = multlineDescription[0];
-        for (int i = 1; i <= multlineDescription.Length; i++)
+        for (int i = 1; i < multlineDescription.Length; i++)
         {
             ingredient.SetDescription(multlineDescription[i],temp);
             

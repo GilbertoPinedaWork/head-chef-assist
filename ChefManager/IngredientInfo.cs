@@ -17,14 +17,14 @@ namespace ChefManager
         {
             string description = existing;
             string temp = input;
-          
-               
-                if (temp == "")
-                    description += temp;
-            
+
+            if (temp == "")
+                return;
+           
+            description += temp;
             Description = description;
         }
-        
+       
         public static void WritePropertiesToFiles(List<IngredientInfo> ingredientList)
         {
             using (StreamWriter nameWriter = new StreamWriter("IngredientName.txt"))

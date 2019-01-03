@@ -25,6 +25,7 @@
         </e>
         <e p="IngredientInfo" t="Include">
           <e p="SetDescription.cs" t="Include" />
+          <e p="WritePropertiesToFile.cs" t="Include" />
         </e>
       </e>
     </e>
