@@ -37,7 +37,7 @@ namespace ChefManager
             }
 
             else
-               IngredientInfo.LoadProperties(ingredientList);
+               IngredientInfo.ReadIngredientsFromFiles(ingredientList);
       
             int answer = -1;
             do

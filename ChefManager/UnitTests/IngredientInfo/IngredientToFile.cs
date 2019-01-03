@@ -26,8 +26,11 @@ public class IngredientToFileTest
         using (StreamReader destinationReader = new StreamReader(ingredient.Name + ".ing"))
         using (StreamReader expectedReader = new StreamReader("TestFile.tst"))
         {
-            Assert.Equals(expectedReader.ReadToEnd(), destinationReader.ReadToEnd());
+            Assert.AreEqual(expectedReader.ReadToEnd(), destinationReader.ReadToEnd());
         }
+        
+        var file =new FileInfo("TestFile.tst");
+        file.Delete();
     }   
 }
     

@@ -44,10 +44,13 @@ public class IngredientListToFile
         using(StreamReader destinationReader2 = new StreamReader(ingredient2.Name + ".ing"))
         using(StreamReader expectedReader2 = new StreamReader("TestFile2.tst"))
         {
-            Assert.Equals(expectedReader.ReadToEnd(), destinationReader.ReadToEnd());
-            Assert.Equals(expectedReader2.ReadToEnd(), destinationReader2.ReadToEnd());
+            Assert.AreEqual(expectedReader.ReadToEnd(), destinationReader.ReadToEnd());
+            Assert.AreEqual(expectedReader2.ReadToEnd(), destinationReader2.ReadToEnd());
         } 
-        
+        var file = new FileInfo("TestFile.tst");
+            file.Delete();
+        var file2 = new FileInfo("TestFile2.tst");
+            file2.Delete();
     }
     
 }

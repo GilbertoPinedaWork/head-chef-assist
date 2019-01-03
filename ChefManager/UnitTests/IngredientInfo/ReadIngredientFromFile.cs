@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,15 +16,24 @@ public class ReadIngredientFromFileTest
         {
             file.Write("Goal\n6\n.4\ng\n1\nfresh goal");
         }
-        DirectoryInfo mockFolder = new DirectoryInfo("\\MockIngredients");
-        var ingredient = new IngredientInfo();
-        IngredientInfo.ReadIngredientFromFile(ingredient, "MockIngredients");
+        
+        
+        var ingredientList = new List<IngredientInfo>();
+        Environment.CurrentDirectory =
+            "C:\\Users\\pined\\Documents\\repos\\Head-Chef\\" +
+            "head-chef-assist\\ChefManager\\UnitTests\\IngredientInfo";
+        
+        IngredientInfo.ReadIngredientsFromFiles(ingredientList);
 
-        Assert.Equals(ingredient.Name, "Goal");
-        Assert.Equals(ingredient.Cost, "6");
-        Assert.Equals(ingredient.Yield, .4);
-        Assert.Equals(ingredient.MeasurementUnit, "g");
-        Assert.Equals(ingredient.Description, "fresh goal");
+        Assert.AreEqual(ingredientList[0].Name, "Goal");
+        Assert.AreEqual(ingredientList[0].Cost, "6");
+        Assert.AreEqual(ingredientList[0].Yield, .4);
+        Assert.AreEqual(ingredientList[0].MeasurementUnit, "g");
+        Assert.AreEqual(ingredientList[0].Description, "fresh goal");
+
+        var filEnd = new FileInfo("MockIngredient.tst");
+            filEnd.Delete();
+        
     }
     
 }
