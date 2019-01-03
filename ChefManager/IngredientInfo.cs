@@ -13,18 +13,15 @@ namespace ChefManager
         public double Cost { get; set; }
         public double Yield { get; set; }
 
-        public void SetDescription()
+        public void SetDescription(string input, string existing = "")
         {
-            string description = "";
-            string temp = "";
-            while (true)
-            {
-               temp =  Console.ReadLine();
+            string description = existing;
+            string temp = input;
+          
+               
                 if (temp == "")
-                    break;
-              
                     description += temp;
-            }
+            
             Description = description;
         }
         
