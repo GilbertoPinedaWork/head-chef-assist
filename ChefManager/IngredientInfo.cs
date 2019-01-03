@@ -25,26 +25,20 @@ namespace ChefManager
             Description = description;
         }
        
-        public static void WritePropertiesToFiles(List<IngredientInfo> ingredientList)
+        public static void IngredientListToFile(List<IngredientInfo> ingredientList)
         {
-            using (StreamWriter nameWriter = new StreamWriter("IngredientName.txt"))
-            using (StreamWriter descWriter = new StreamWriter("IngredienDescription.txt"))
-            using (StreamWriter unitWriter = new StreamWriter("IngredientUnit.txt"))
-            using (StreamWriter costWriter = new StreamWriter("IngredientCost.txt"))
-            using (StreamWriter yieldWriter = new StreamWriter("IngredientYield.txt"))
-            using (StreamWriter quantityWriter = new StreamWriter("IngredientQuantity.txt"))
-            {
-                foreach (var ingredient in ingredientList)
-                {
-                
-                    nameWriter.WriteLine(ingredient.Name);
-                    descWriter.WriteLine(ingredient.Description);
-                    unitWriter.WriteLine(ingredient.MeasurementUnit);
-                    costWriter.WriteLine(ingredient.Cost);
-                    yieldWriter.WriteLine(ingredient.Yield);
-                    quantityWriter.WriteLine(ingredient.Quantity);
-                }
-            }
+          foreach (var ingredient in ingredientList)
+           {
+             using (var fWriter = new StreamWriter(ingredient.Name + ".ing"))
+             {
+                fWriter.WriteLine(ingredient.Name); 
+                fWriter.WriteLine(ingredient.Cost); 
+                fWriter.WriteLine(ingredient.Yield);  
+                fWriter.WriteLine(ingredient.MeasurementUnit);   
+                fWriter.WriteLine(ingredient.Quantity); 
+                fWriter.WriteLine(ingredient.Description);  
+             }
+           }
         }
         public static void WritePropertiesToFiles(IngredientInfo ingredient)
         {

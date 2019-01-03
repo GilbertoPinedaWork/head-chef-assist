@@ -36,7 +36,7 @@ public class IngredientListToFile
             swriter2.Write("Goal\n6\n.3\ng\n1\nA Fresh Coal");
             
         }  
-        IngredientInfo.IngredientListToFile(ingredientList, destination);
+        IngredientInfo.IngredientListToFile(ingredientList);
         
         using (StreamReader destinationReader = new StreamReader(ingredient.Name + ".ing"))
         using(StreamReader expectedReader = new StreamReader("TestFile.tst"))

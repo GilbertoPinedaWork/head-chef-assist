@@ -47,7 +47,7 @@ namespace ChefManager
                
             } while (answer > 0);
 
-           IngredientInfo.WritePropertiesToFiles(ingredientList);
+           IngredientInfo.IngredientListToFile(ingredientList);
         }
 
         public void RecipeManagerMain()

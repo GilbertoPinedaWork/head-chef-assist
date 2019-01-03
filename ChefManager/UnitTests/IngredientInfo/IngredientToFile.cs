@@ -21,10 +21,10 @@ public class IngredientToFileTest
         {
             swriter.Write("Coal\n5\n.3\ng\n1\nA Fresh Coal");
         }  
-            IngredientInfo.IngredientToFile(ingredient, destination);
+            IngredientInfo.IngredientToFile(ingredient);
         
         using (StreamReader destinationReader = new StreamReader(ingredient.Name + ".ing"))
-        using(StreamReader expectedReader = new StreamReader("TestFile.tst"))
+        using (StreamReader expectedReader = new StreamReader("TestFile.tst"))
         {
             Assert.Equals(expectedReader.ReadToEnd(), destinationReader.ReadToEnd());
         }
