@@ -24,6 +24,7 @@
           <e p="NumberOnlyInputTest.cs" t="Include" />
         </e>
         <e p="IngredientInfo" t="Include">
+          <e p="GetIngredientNames.cs" t="Include" />
           <e p="IngredientListToFile.cs" t="Include" />
           <e p="IngredientToFile.cs" t="Include" />
           <e p="ReadIngredientFromFile.cs" t="Include" />
