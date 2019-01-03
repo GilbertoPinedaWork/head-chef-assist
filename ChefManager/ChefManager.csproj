@@ -52,11 +52,15 @@
     <Compile Include="RecipeInfo.cs" />
     <Compile Include="RecipeManagerMethodscs.cs" />
     <Compile Include="UnitTests\GenericManagerMethods\NumberOnlyInputTest.cs" />
+    <Compile Include="UnitTests\IngredientInfo\ReadIngredientFromFile.cs" />
     <Compile Include="UnitTests\IngredientInfo\SetDescription.cs" />
-    <Compile Include="UnitTests\IngredientInfo\WritePropertiesToFile.cs" />
+    <Compile Include="UnitTests\IngredientInfo\IngredientToFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UnitTests\IngredientInfo\IngredientListToFile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -11,26 +11,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IngredientInfo.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/IngredientInfo.cs">
+      <file leaf-file-name="ReadIngredientFromFile.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/ReadIngredientFromFile.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            <state relative-caret-position="360">
+              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
               <folding>
-                <marker date="1546534997618" expanded="false" signature="6:64" ph="..." />
-                <marker date="1546534997618" expanded="true" signature="87:4851" ph="{...}" />
-                <marker date="1546534997618" expanded="true" signature="121:4849" ph="{...}" />
-                <marker date="1546534997618" expanded="true" signature="499:732" ph="{...}" />
-                <marker date="1546534997618" expanded="true" signature="827:1895" ph="{...}" />
-                <marker date="1546534997618" expanded="true" signature="1363:1885" ph="{...}" />
-                <marker date="1546534997618" expanded="true" signature="1436:1871" ph="{...}" />
-                <marker date="1546534997618" expanded="true" signature="1972:2944" ph="{...}" />
-                <marker date="1546534997618" expanded="true" signature="2508:2934" ph="{...}" />
-                <marker date="1546534997618" expanded="true" signature="3023:4476" ph="{...}" />
-                <marker date="1546534997618" expanded="true" signature="3523:4466" ph="{...}" />
-                <marker date="1546534997618" expanded="true" signature="3720:4452" ph="{...}" />
-                <marker date="1546534997618" expanded="true" signature="4551:4843" ph="{...}" />
-                <marker date="1546534997618" expanded="true" signature="4665:4805" ph="{...}" />
+                <marker date="1546547573495" expanded="true" signature="6:157" ph="..." />
+                <marker date="1546547573495" expanded="true" signature="212:874" ph="{...}" />
+                <marker date="1546547573495" expanded="true" signature="256:867" ph="{...}" />
+                <marker date="1546547573495" expanded="true" signature="328:405" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -51,15 +41,18 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/UnitTests/GenericManagerMethods/NumberOnlyInputTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/SetDescription.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RecipeInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/IngredientToFile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MainPrograms.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RecipeManagerMethodscs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IngredientManagerMethods.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/ReadIngredientFromFile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/IngredientListToFile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RecipeInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IngredientInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RecipeManagerMethodscs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GenericManagerMethodTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GenericManagerMethods.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestGenericManagerMethods.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IngredientManagerMethods.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -80,6 +73,13 @@
         <option value="$PROJECT_DIR$/IngredientManagerMethods.cs" />
         <option value="$PROJECT_DIR$/UnitTests/IngredientInfo/WritePropertiesToFile.cs." />
         <option value="$PROJECT_DIR$/IngredientInfo.cs" />
+        <option value="$PROJECT_DIR$/UnitTests/IngredientInfo/WritePropertiesToFile.cs" />
+        <option value="$PROJECT_DIR$/UnitTests/IngredientInfo/IngredientListToFile." />
+        <option value="$PROJECT_DIR$/UnitTests/IngredientInfo/SetDescription.cs" />
+        <option value="$PROJECT_DIR$/UnitTests/IngredientInfo/IngredientToFile.cs" />
+        <option value="$PROJECT_DIR$/UnitTests/IngredientInfo/IngredientListToFile.cs" />
+        <option value="$PROJECT_DIR$/UnitTests/IngredientInfo/FileToIngredient.cs." />
+        <option value="$PROJECT_DIR$/UnitTests/IngredientInfo/ReadIngredientFromFile.cs" />
       </list>
     </option>
   </component>
@@ -190,7 +190,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52229000" />
+    <option name="totallyTimeSpent" value="62015000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -264,41 +264,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RecipeInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IngredientInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecipeManagerMethodscs.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainPrograms.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainPrograms.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -556,19 +521,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/SetDescription.cs." />
-    <entry file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/SetDescription.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1546530956167" expanded="false" signature="6:41" ph="..." />
-            <marker date="1546530956167" expanded="true" signature="88:871" ph="{...}" />
-            <marker date="1546530956167" expanded="true" signature="139:382" ph="{...}" />
-            <marker date="1546530956167" expanded="true" signature="438:869" ph="{...}" />
-            <marker date="1546530956167" expanded="true" signature="676:777" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/WritePropertiesToFile.cs.">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -576,25 +528,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/IngredientListToFile.">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/SetDescription.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <marker date="1546541506049" expanded="false" signature="6:41" ph="..." />
+            <marker date="1546541506049" expanded="true" signature="88:863" ph="{...}" />
+            <marker date="1546541506049" expanded="true" signature="142:385" ph="{...}" />
+            <marker date="1546541506049" expanded="true" signature="443:861" ph="{...}" />
+            <marker date="1546541506049" expanded="true" signature="681:769" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/FileToIngredient.cs.">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/IngredientInfo.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
+        <state relative-caret-position="111">
           <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
           <folding>
-            <marker date="1546534997618" expanded="false" signature="6:64" ph="..." />
-            <marker date="1546534997618" expanded="true" signature="87:4851" ph="{...}" />
-            <marker date="1546534997618" expanded="true" signature="121:4849" ph="{...}" />
-            <marker date="1546534997618" expanded="true" signature="499:732" ph="{...}" />
-            <marker date="1546534997618" expanded="true" signature="827:1895" ph="{...}" />
-            <marker date="1546534997618" expanded="true" signature="1363:1885" ph="{...}" />
-            <marker date="1546534997618" expanded="true" signature="1436:1871" ph="{...}" />
-            <marker date="1546534997618" expanded="true" signature="1972:2944" ph="{...}" />
-            <marker date="1546534997618" expanded="true" signature="2508:2934" ph="{...}" />
-            <marker date="1546534997618" expanded="true" signature="3023:4476" ph="{...}" />
-            <marker date="1546534997618" expanded="true" signature="3523:4466" ph="{...}" />
-            <marker date="1546534997618" expanded="true" signature="3720:4452" ph="{...}" />
-            <marker date="1546534997618" expanded="true" signature="4551:4843" ph="{...}" />
-            <marker date="1546534997618" expanded="true" signature="4665:4805" ph="{...}" />
+            <marker date="1546535117574" expanded="false" signature="6:64" ph="..." />
+            <marker date="1546535117574" expanded="true" signature="87:4851" ph="{...}" />
+            <marker date="1546535117574" expanded="true" signature="121:4849" ph="{...}" />
+            <marker date="1546535117574" expanded="true" signature="499:732" ph="{...}" />
+            <marker date="1546535117574" expanded="false" signature="827:1895" ph="{...}" />
+            <marker date="1546535117574" expanded="true" signature="1363:1885" ph="{...}" />
+            <marker date="1546535117574" expanded="true" signature="1436:1871" ph="{...}" />
+            <marker date="1546535117574" expanded="false" signature="1972:2944" ph="{...}" />
+            <marker date="1546535117574" expanded="true" signature="2508:2934" ph="{...}" />
+            <marker date="1546535117574" expanded="false" signature="3023:4476" ph="{...}" />
+            <marker date="1546535117574" expanded="true" signature="3523:4466" ph="{...}" />
+            <marker date="1546535117574" expanded="true" signature="3720:4452" ph="{...}" />
+            <marker date="1546535117574" expanded="true" signature="4551:4843" ph="{...}" />
+            <marker date="1546535117574" expanded="true" signature="4665:4805" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/IngredientToFile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" column="9" selection-start-line="11" selection-start-column="8" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <marker date="1546541505972" expanded="false" signature="6:92" ph="..." />
+            <marker date="1546541505972" expanded="true" signature="141:958" ph="{...}" />
+            <marker date="1546541505972" expanded="true" signature="200:953" ph="{...}" />
+            <marker date="1546541505972" expanded="true" signature="259:435" ph="{...}" />
+            <marker date="1546541505972" expanded="true" signature="508:590" ph="{...}" />
+            <marker date="1546541505972" expanded="true" signature="841:947" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/IngredientListToFile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="47" column="87" selection-start-line="47" selection-start-column="87" selection-end-line="47" selection-end-column="87" />
+          <folding>
+            <marker date="1546545516616" expanded="false" signature="6:92" ph="..." />
+            <marker date="1546545516616" expanded="true" signature="140:1748" ph="{...}" />
+            <marker date="1546545516616" expanded="true" signature="205:1741" ph="{...}" />
+            <marker date="1546545516616" expanded="true" signature="264:440" ph="{...}" />
+            <marker date="1546545516616" expanded="true" signature="504:681" ph="{...}" />
+            <marker date="1546545516616" expanded="true" signature="919:1090" ph="{...}" />
+            <marker date="1546545516616" expanded="true" signature="1531:1725" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/ReadIngredientFromFile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+          <folding>
+            <marker date="1546547573495" expanded="true" signature="6:157" ph="..." />
+            <marker date="1546547573495" expanded="true" signature="212:874" ph="{...}" />
+            <marker date="1546547573495" expanded="true" signature="256:867" ph="{...}" />
+            <marker date="1546547573495" expanded="true" signature="328:405" ph="{...}" />
           </folding>
         </state>
       </provider>
