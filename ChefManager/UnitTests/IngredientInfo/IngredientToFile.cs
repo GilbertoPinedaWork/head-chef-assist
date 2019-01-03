@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.IO;
 using ChefManager;
 using NUnit.Framework;
 
@@ -5,7 +7,7 @@ using NUnit.Framework;
 public class WritePropertiesToFileTest
 {
     [Test]
-    public void AllPropertiesToFiles()
+    public void IngredientToFile()
     {
         var ingredient = new IngredientInfo
         {   Cost = 5,
@@ -15,11 +17,15 @@ public class WritePropertiesToFileTest
             MeasurementUnit = "g",
             Quantity = 1
         };
-        
-     
+        using (MemoryStream mstream = new MemoryStream())
+        {
+            
+            IngredientInfo.IngredientToFile(ingredient, destination);
 
+            Assert()
+        }
     }
-
+        
     [Test]
     public void NullProperties()
     {
