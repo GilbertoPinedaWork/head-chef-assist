@@ -2,6 +2,10 @@ using NUnit.Framework;
 using ChefManager;
 using System.Collections.Generic;
 using System.IO;
+using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
 [TestFixture]
 public class IngredientListToFile
 {
@@ -12,7 +16,7 @@ public class IngredientListToFile
         {   Cost = 5,
             Name = "Coal",
             Description = "A Fresh Coal",
-            Yield = .3,
+            Yield = .4,
             MeasurementUnit = "g",
             Quantity = 1
         };
@@ -22,18 +26,22 @@ public class IngredientListToFile
             Name = "Goal",
             Description = "B Fresh Coal",
             Yield = .4,
-            MeasurementUnit = "tz",
+            MeasurementUnit = "g",
             Quantity = 1
         };
-
+            
         var ingredientList = new List<IngredientInfo> {ingredient, ingredient2};
+
+        string workingDir = Environment.CurrentDirectory;
+        Environment.CurrentDirectory =
+            "C:\\Users\\pined\\Documents";
         
         using (StreamWriter swriter = new StreamWriter("TestFile.tst"))
         using (StreamWriter swriter2 = new StreamWriter("TestFile2.tst"))
         {
             
-            swriter.Write("Coal\n5\n.3\ng\n1\nA Fresh Coal");
-            swriter2.Write("Goal\n6\n.3\ng\n1\nA Fresh Coal");
+            swriter.Write("Coal\n5\n0.4\ng\n1\nA Fresh Coal");
+            swriter2.Write("Goal\n6\n0.4\ng\n1\nB Fresh Coal");
             
         }  
         IngredientInfo.IngredientListToFile(ingredientList);
@@ -44,13 +52,19 @@ public class IngredientListToFile
         using(StreamReader destinationReader2 = new StreamReader(ingredient2.Name + ".ing"))
         using(StreamReader expectedReader2 = new StreamReader("TestFile2.tst"))
         {
-            Assert.AreEqual(expectedReader.ReadToEnd(), destinationReader.ReadToEnd());
-            Assert.AreEqual(expectedReader2.ReadToEnd(), destinationReader2.ReadToEnd());
+            string line = expectedReader.ReadLine();
+            do
+            {
+                Assert.AreEqual(line, destinationReader.ReadLine());
+                Assert.AreEqual(expectedReader2.ReadLine(), destinationReader2.ReadLine());
+                line = expectedReader.ReadLine();
+            } while (line != null);
         } 
-        var file = new FileInfo("TestFile.tst");
-            file.Delete();
-        var file2 = new FileInfo("TestFile2.tst");
-            file2.Delete();
+        File.Delete(Environment.CurrentDirectory+"\\TestFile.tst");
+        File.Delete(Environment.CurrentDirectory+"\\TestFile2.tst");
+        File.Delete(Environment.CurrentDirectory+"\\Coal.ing");
+        File.Delete(Environment.CurrentDirectory+"\\Goal.ing");
+        Environment.CurrentDirectory = workingDir;
     }
     
 }
