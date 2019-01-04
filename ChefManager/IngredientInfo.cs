@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace ChefManager
 {
@@ -59,18 +60,19 @@ namespace ChefManager
             var ingredientFiles = currentDirectory.GetFiles();
             foreach (var file in ingredientFiles)
             {
-              using (var fReader = new StreamReader(file.Name))
+
+                string[] data = File.ReadAllLines(file.Name).SelectMany(s => s.Split('\n')).ToArray();
+                double.TryParse(data[1], out double cost);
+                double.TryParse(data[2], out double yield);
+                
+               ingredientList.Add(item:new IngredientInfo
                {
-                 ingredientList.Add (new IngredientInfo
-                 {
-                  Name =fReader.ReadLine(),
-                  Cost = Convert.ToDouble(fReader.ReadLine()),
-                  Yield = Convert.ToDouble(fReader.ReadLine()),
-                  MeasurementUnit = fReader.ReadLine(),
-                  Description = fReader.ReadToEnd()
-                  });
-                   
-               } 
+                   Name=data[0],
+                   Cost = cost,
+                   Yield = yield,
+                   MeasurementUnit =data[3]
+               }); 
+               
             }
         }
         public static string GetIngredientNames(List<IngredientInfo> list)

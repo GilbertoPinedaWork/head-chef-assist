@@ -11,7 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< Updated upstream
       <file leaf-file-name="IngredientInfo.cs" pinned="false" current-in-tab="true">
+=======
+      <file leaf-file-name="IngredientInfo.cs" pinned="false" current-in-tab="false">
+>>>>>>> Stashed changes
         <entry file="file://$PROJECT_DIR$/IngredientInfo.cs">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
@@ -33,6 +37,7 @@
                 <marker date="1546563193974" expanded="true" signature="2384:2684" ph="{...}" />
                 <marker date="1546563193974" expanded="true" signature="2803:3123" ph="{...}" />
                 <marker date="1546563193974" expanded="true" signature="2917:3086" ph="{...}" />
+<<<<<<< Updated upstream
 =======
             <state relative-caret-position="15">
               <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
@@ -52,6 +57,8 @@
                 <marker date="1546615947924" expanded="true" signature="4551:4843" ph="{...}" />
                 <marker date="1546615947924" expanded="true" signature="4665:4805" ph="{...}" />
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
@@ -61,6 +68,9 @@
         <entry file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/ReadIngredientFromFile.cs">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
             <state relative-caret-position="276">
               <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
               <folding>
@@ -68,11 +78,14 @@
                 <marker date="1546563194047" expanded="true" signature="226:1198" ph="{...}" />
                 <marker date="1546563194047" expanded="true" signature="270:1191" ph="{...}" />
                 <marker date="1546563194047" expanded="true" signature="480:558" ph="{...}" />
+<<<<<<< Updated upstream
 =======
             <state relative-caret-position="420">
               <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
               <folding>
                 <marker date="1546615947991" expanded="true" signature="860:867" ph="{...}" />
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
               </folding>
             </state>
@@ -100,9 +113,13 @@
     <setting file="file://$PROJECT_DIR$/IngredientManagerMethods.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/ReadIngredientFromFile.cs" root0="SKIP_HIGHLIGHTING" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <setting file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/IngredientListToFile.cs" root0="SKIP_HIGHLIGHTING" />
 =======
     <setting file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/IngredientListToFile.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> Stashed changes
+=======
+    <setting file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/IngredientListToFile.cs" root0="SKIP_HIGHLIGHTING" />
 >>>>>>> Stashed changes
     <setting file="file://$PROJECT_DIR$/RecipeInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -153,9 +170,15 @@
     <packageJsonPaths />
   </component>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <component name="ProjectFrameBounds" extendedState="6">
 <<<<<<< Updated upstream
     <option name="x" value="631" />
+=======
+  <component name="ProjectFrameBounds">
+    <option name="x" value="705" />
+    <option name="y" value="596" />
+>>>>>>> Stashed changes
 =======
   <component name="ProjectFrameBounds">
     <option name="x" value="705" />
@@ -183,6 +206,14 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="ChefManager (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
+<<<<<<< Updated upstream
+=======
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ChefManager (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ChefManager" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+>>>>>>> Stashed changes
           </expand>
           <select />
         </subPane>
@@ -245,18 +276,26 @@
       <workItem from="1546389538817" duration="5583000" />
       <workItem from="1546434162023" duration="9783000" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <workItem from="1546613558435" duration="398000" />
 =======
       <workItem from="1546637314976" duration="891000" />
+>>>>>>> Stashed changes
+=======
+      <workItem from="1546613558435" duration="398000" />
 >>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="73846000" />
 =======
     <option name="totallyTimeSpent" value="64430000" />
+>>>>>>> Stashed changes
+=======
+    <option name="totallyTimeSpent" value="73846000" />
 >>>>>>> Stashed changes
   </component>
   <component name="TodoView">
@@ -270,15 +309,20 @@
   </component>
   <component name="ToolWindowManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <frame x="705" y="596" width="697" height="475" extended-state="0" />
 =======
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+>>>>>>> Stashed changes
+=======
+    <frame x="705" y="596" width="697" height="475" extended-state="0" />
 >>>>>>> Stashed changes
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       <window_info active="true" anchor="bottom" id="Unit Tests" order="10" visible="true" weight="0.95280236" />
 =======
@@ -299,6 +343,20 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.39144737" />
       <window_info id="Favorites" order="2" side_tool="true" />
+=======
+      <window_info active="true" anchor="bottom" id="Unit Tests" order="10" visible="true" weight="0.95280236" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2888147" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.3338898" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37871674" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.39144737" />
+>>>>>>> Stashed changes
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -606,6 +664,9 @@
     <entry file="file://$PROJECT_DIR$/UnitTests/IngredientInfo/IngredientToFile.cs">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
         <state relative-caret-position="360">
           <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding>
@@ -615,11 +676,14 @@
             <marker date="1546563194045" expanded="true" signature="281:457" ph="{...}" />
             <marker date="1546563194045" expanded="true" signature="671:754" ph="{...}" />
             <marker date="1546563194045" expanded="true" signature="993:1250" ph="{...}" />
+<<<<<<< Updated upstream
 =======
         <state relative-caret-position="420">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding>
             <marker date="1546615947991" expanded="true" signature="860:867" ph="{...}" />
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
           </folding>
         </state>
@@ -654,6 +718,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+<<<<<<< Updated upstream
           <folding>
             <marker date="1546563194047" expanded="false" signature="6:171" ph="..." />
             <marker date="1546563194047" expanded="true" signature="226:1198" ph="{...}" />
@@ -677,6 +742,13 @@
             <marker date="1546615947924" expanded="true" signature="3720:4452" ph="{...}" />
             <marker date="1546615947924" expanded="true" signature="4551:4843" ph="{...}" />
             <marker date="1546615947924" expanded="true" signature="4665:4805" ph="{...}" />
+>>>>>>> Stashed changes
+=======
+          <folding>
+            <marker date="1546563194047" expanded="false" signature="6:171" ph="..." />
+            <marker date="1546563194047" expanded="true" signature="226:1198" ph="{...}" />
+            <marker date="1546563194047" expanded="true" signature="270:1191" ph="{...}" />
+            <marker date="1546563194047" expanded="true" signature="480:558" ph="{...}" />
 >>>>>>> Stashed changes
           </folding>
         </state>
