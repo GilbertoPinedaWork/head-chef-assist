@@ -25,7 +25,6 @@ namespace ChefManager
             description += temp;
             Description = description;
         }
-       
         public static void IngredientListToFile(List<IngredientInfo> ingredientList)
         {
           foreach (var ingredient in ingredientList)
@@ -53,26 +52,36 @@ namespace ChefManager
                 fWriter.WriteLine(ingredient.Description);  
             }
         }
-
         public static void ReadIngredientsFromFiles(List<IngredientInfo> ingredientList)
         {
             var currentDirectory = new DirectoryInfo(Environment.CurrentDirectory);
             var ingredientFiles = currentDirectory.GetFiles();
             foreach (var file in ingredientFiles)
             {
-
-                string[] data = File.ReadAllLines(file.Name).SelectMany(s => s.Split('\n')).ToArray();
-                double.TryParse(data[1], out double cost);
-                double.TryParse(data[2], out double yield);
+                string[] ingredientData = File.ReadAllLines(file.Name).
+                                SelectMany(s => s.Split('\n')).
+                                ToArray();
                 
-               ingredientList.Add(item:new IngredientInfo
+                double.TryParse(ingredientData[1], out double cost);
+                double.TryParse(ingredientData[2], out double yield);
+                int.TryParse(ingredientData[4], out int quantity);
+                
+               ingredientList.Add(new IngredientInfo
                {
-                   Name=data[0],
+                   Name=ingredientData[0],
                    Cost = cost,
                    Yield = yield,
-                   MeasurementUnit =data[3]
-               }); 
-               
+                   MeasurementUnit =ingredientData[3],
+                   Quantity = quantity,
+                   
+               });
+                
+                var descriptionIndex = 5;
+                do
+                {
+                    ingredientList[0].Description += ingredientData[descriptionIndex];
+                    descriptionIndex++;
+                } while (descriptionIndex < ingredientData.Length);
             }
         }
         public static string GetIngredientNames(List<IngredientInfo> list)

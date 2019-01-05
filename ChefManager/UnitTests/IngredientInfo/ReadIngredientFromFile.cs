@@ -3,18 +3,27 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography;
 using ChefManager;
 
 [TestFixture]
 public class ReadIngredientFromFileTest
 {
+   
+     private readonly string  workingDir = Environment.CurrentDirectory;
+     private DirectoryInfo testFolder = new DirectoryInfo("C:\\Users\\pined\\Documents\\IngredientInfoTest");
+
+    [Test]
+    public void DirectoryCreation()
+    {
+        testFolder.Create();
+    }
     [Test]
     public void Default_File()
     {
-        var workingDir = Environment.CurrentDirectory;
-        Environment.CurrentDirectory = "C:\\Users\\pined\\Documents";
-            
+        Environment.CurrentDirectory = testFolder.FullName;
+           
         using (var file = new StreamWriter("MockIngredient.tst"))
         {
             file.Write("Goal\n6\n0.4\ng\n1\nfresh goal");
@@ -32,7 +41,13 @@ public class ReadIngredientFromFileTest
 
         var filEnd = new FileInfo("MockIngredient.tst");
             filEnd.Delete();
-        Environment.CurrentDirectory = workingDir;
+       
     }
-    
+    [Test]
+    public void DirectoryReset()
+    {
+        Environment.CurrentDirectory = workingDir;
+        Assert.AreEqual(Environment.CurrentDirectory,workingDir);
+        testFolder.Delete();
+    }
 }
