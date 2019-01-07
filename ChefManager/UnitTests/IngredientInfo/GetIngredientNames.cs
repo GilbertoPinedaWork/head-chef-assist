@@ -13,7 +13,7 @@ public class GetIngredientNames
             new IngredientInfo {Name = "Coal"}
         };
 
-        var ingredientNames = IngredientInfo.GetIngredientNames(list);
+        var ingredientNames = IngredientManagerMethods.GetIngredientNames(list);
 
         Assert.AreEqual("1) Coal\n", ingredientNames);
     }
@@ -27,7 +27,7 @@ public class GetIngredientNames
             new IngredientInfo {Name = "Chicken"}
         };
         
-        var ingredientNames = IngredientInfo.GetIngredientNames(list);
+        var ingredientNames = IngredientManagerMethods.GetIngredientNames(list);
         
         Assert.AreEqual("1) Coal\n2) Chicken\n",ingredientNames);
     }

@@ -14,28 +14,9 @@ namespace ChefManager
         public void IngredientManagerMain()
         {
             var iManager = new IngredientManagerMethods();
-            var ingredientList = new List<IngredientInfo>();
-            var firstUseFlag = new FileInfo("useIngFlag.txt");
+            var ingredientList = iManager.IngredientList;
+           
 
-            if (!firstUseFlag.Exists)
-            {
-                firstUseFlag.Create();
-                var closable = firstUseFlag.OpenText();
-                closable.Close();
-            }
-
-            if (firstUseFlag.Length == 0)
-            {
-                iManager.Tutorial(ingredientList);
-
-                var flagwriter = firstUseFlag.CreateText();
-                flagwriter.WriteLine("1");
-                flagwriter.Close();
-            }
-
-            else
-               IngredientInfo.ReadIngredientsFromFiles(ingredientList);
-      
             int answer = -1;
             do
             {
@@ -44,7 +25,7 @@ namespace ChefManager
                
             } while (answer > 0);
 
-           IngredientInfo.IngredientListToFile(ingredientList);
+           IngredientManagerMethods.IngredientListToFile(ingredientList);
         }
 
         public void RecipeManagerMain()

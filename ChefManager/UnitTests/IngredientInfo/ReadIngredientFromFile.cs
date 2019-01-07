@@ -3,6 +3,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography;
 using ChefManager;
@@ -24,9 +25,10 @@ public class ReadIngredientFromFileTest
         {
             file.Write("Goal\n6\n0.4\ng\n1\nfresh goal");
         }
-        
-        var ingredientList = new List<IngredientInfo>();
-        IngredientInfo.ReadIngredientsFromFiles(ingredientList);
+
+        var imanager = new IngredientManagerMethods();
+        var ingredientList = imanager.IngredientList.ToList();
+       
 
         Assert.AreEqual(ingredientList[0].Name, "Goal");
         Assert.AreEqual(ingredientList[0].Cost, 6.0);
