@@ -37,7 +37,7 @@ namespace ChefManager
             }
 
             else
-               IngredientInfo.LoadProperties(ingredientList);
+               IngredientInfo.ReadIngredientsFromFiles(ingredientList);
       
             int answer = -1;
             do
@@ -47,7 +47,7 @@ namespace ChefManager
                
             } while (answer > 0);
 
-           IngredientInfo.WritePropertiesToFiles(ingredientList);
+           IngredientInfo.IngredientListToFile(ingredientList);
         }
 
         public void RecipeManagerMain()
