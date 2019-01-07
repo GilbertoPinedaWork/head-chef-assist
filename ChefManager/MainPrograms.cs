@@ -8,12 +8,9 @@ namespace ChefManager
 
     public class MainPrograms
     {
-
         //TODO ENCRYPTION
         // TODO Refactor
         //TODO  Check For File Existence,
-       
-
         public void IngredientManagerMain()
         {
             var iManager = new IngredientManagerMethods();
