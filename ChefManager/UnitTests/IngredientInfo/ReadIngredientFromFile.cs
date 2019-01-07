@@ -12,17 +12,13 @@ public class ReadIngredientFromFileTest
 {
    
      private readonly string  workingDir = Environment.CurrentDirectory;
-     private DirectoryInfo testFolder = new DirectoryInfo("C:\\Users\\pined\\Documents\\IngredientInfoTest");
-
-    [Test]
-    public void DirectoryCreation()
-    {
-        testFolder.Create();
-    }
+     private readonly DirectoryInfo testFolder = new DirectoryInfo("C:\\Users\\pined\\Documents");
+   
     [Test]
     public void Default_File()
     {
-        Environment.CurrentDirectory = testFolder.FullName;
+        testFolder.CreateSubdirectory("TestFolder");
+        Environment.CurrentDirectory = testFolder.FullName+"\\TestFolder";
            
         using (var file = new StreamWriter("MockIngredient.tst"))
         {
@@ -33,21 +29,16 @@ public class ReadIngredientFromFileTest
         IngredientInfo.ReadIngredientsFromFiles(ingredientList);
 
         Assert.AreEqual(ingredientList[0].Name, "Goal");
-        Assert.AreEqual(ingredientList[0].Cost, "6");
+        Assert.AreEqual(ingredientList[0].Cost, 6.0);
         Assert.AreEqual(ingredientList[0].Yield, 0.4);
         Assert.AreEqual(ingredientList[0].MeasurementUnit, "g");
         Assert.AreEqual(ingredientList[0].Quantity, 1);
         Assert.AreEqual(ingredientList[0].Description, "fresh goal");
 
         var filEnd = new FileInfo("MockIngredient.tst");
-            filEnd.Delete();
-       
-    }
-    [Test]
-    public void DirectoryReset()
-    {
+        filEnd.Delete();
         Environment.CurrentDirectory = workingDir;
-        Assert.AreEqual(Environment.CurrentDirectory,workingDir);
-        testFolder.Delete();
+       //TODO FIX Exception testFolder.Delete();
+       
     }
 }
