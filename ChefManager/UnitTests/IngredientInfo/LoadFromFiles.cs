@@ -9,7 +9,7 @@ using System.Security.Cryptography;
 using ChefManager;
 
 [TestFixture]
-public class ReadIngredientFromFileTest: IngredientManagerMethods
+public class ReadIngredientFromFileTest: IM_Modifier
 {
    
      private readonly string  workingDir = Environment.CurrentDirectory;
@@ -26,7 +26,7 @@ public class ReadIngredientFromFileTest: IngredientManagerMethods
             file.Write("Goal\n6\n0.4\ng\n1\nfresh goal");
         }
 
-        var imanager = new IngredientManagerMethods();
+        var imanager = new IM_IngredientLoader();
         var ingredientList = imanager.IngredientList.ToList();
        
 

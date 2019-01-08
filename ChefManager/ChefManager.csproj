@@ -43,25 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GenericManagerMethods.cs" />
-    <Compile Include="IngredientInfo.cs" />
+    <Compile Include="GM-Methods.cs" />
+    <Compile Include="IM_IngredientInfo.cs" />
+    <Compile Include="IM_IngredientLoader.cs" />
+    <Compile Include="IM_PublicInterface.cs" />
     <Compile Include="MainPrograms.cs" />
-    <Compile Include="IngredientManagerMethods.cs" />
+    <Compile Include="IM_IngredientModifier.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecipeInfo.cs" />
-    <Compile Include="RecipeManagerMethodscs.cs" />
+    <Compile Include="RM-Methods.cs" />
     <Compile Include="UnitTests\GenericManagerMethods\NumberOnlyInputTest.cs" />
-    <Compile Include="UnitTests\IngredientInfo\GetIngredientNames.cs" />
-    <Compile Include="UnitTests\IngredientInfo\ReadIngredientFromFile.cs" />
-    <Compile Include="UnitTests\IngredientInfo\SetDescription.cs" />
-    <Compile Include="UnitTests\IngredientInfo\IngredientToFile.cs" />
+    <Compile Include="UnitTests\IngredientInfo\LoadFromFiles.cs" />
+    <Compile Include="UnitTests\IngredientInfo\ToFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTests\IngredientInfo\IngredientListToFile.cs" />
+    <Compile Include="UnitTests\IngredientInfo\ToFiles.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -44,7 +44,7 @@ public class IngredientListToFile
             swriter2.Write("Goal\n6\n0.4\ng\n1\nB Fresh Coal");
             
         }  
-        IngredientManagerMethods.IngredientListToFile(ingredientList);
+        IM_IngredientLoader.ToFiles(ingredientList);
         
         using (StreamReader destinationReader = new StreamReader(ingredient.Name + ".ing"))
         using(StreamReader expectedReader = new StreamReader("TestFile.tst"))

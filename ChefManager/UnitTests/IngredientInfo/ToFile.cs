@@ -28,7 +28,7 @@ public class IngredientToFileTest
         {
             swriter.Write("Coal\n5\n0.3\ng\n1\nA Fresh Coal");
         }  
-            IngredientInfo.IngredientToFile(ingredient);
+           ingredient.ToFile();
         
         using (StreamReader destinationReader = new StreamReader(ingredient.Name + ".ing"))
         using (StreamReader expectedReader = new StreamReader("TestFile.tst"))

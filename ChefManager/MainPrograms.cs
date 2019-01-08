@@ -13,19 +13,18 @@ namespace ChefManager
         //TODO  Check For File Existence,
         public void IngredientManagerMain()
         {
-            var iManager = new IngredientManagerMethods();
-            var ingredientList = iManager.IngredientList;
+            var iManager = new IM_IngredientLoader();
+          
            
 
             int answer = -1;
             do
             {
-                answer = iManager.MainMenu();
-                iManager.Action(answer, ingredientList);
+                answer = IM_PublicInterface.MainMenu(iManager.IngredientList);
                
             } while (answer > 0);
 
-           IngredientManagerMethods.IngredientListToFile(ingredientList);
+           IM_IngredientLoader.ToFiles(iManager.IngredientList);
         }
 
         public void RecipeManagerMain()
