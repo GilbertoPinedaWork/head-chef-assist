@@ -10,17 +10,24 @@ namespace  ChefManager
     public class IngredientManagerMethods : GenericManagerMethods
     {
       public List<IngredientInfo> IngredientList = new List<IngredientInfo>();
-
-       public IngredientManagerMethods()
+      public IngredientManagerMethods()
         {
-            ReadIngredientsFromFiles(IngredientList);
-            using (FileStream fstream = new FileStream("FirstIngFlag.txt", FileMode.OpenOrCreate,FileAccess.ReadWrite))
+            using (var veriFile = new StreamReader("IMTutorial.txt"))
             {
-                if()
+                if (veriFile.ReadLine() != null)
+                {
+                    ReadIngredientsFromFiles(IngredientList);
+                    return;
+                }
             }
+            using (var writer = new StreamWriter("IMTutorial"))
+            {
+                writer.Write("1");
+            }
+            
+            IngredientManagerMethods.Tutorial(IngredientList);
         }
-
-        public static void IngredientListToFile(List<IngredientInfo> ingredientList)
+      public static void IngredientListToFile(List<IngredientInfo> ingredientList)
         {
           foreach (var ingredient in ingredientList)
            {
@@ -35,8 +42,7 @@ namespace  ChefManager
              }
            }
         }
-        
-        public static void ReadIngredientsFromFiles(List<IngredientInfo> ingredientList)
+      private static void ReadIngredientsFromFiles(List<IngredientInfo> ingredientList)
         {
             var currentDirectory = new DirectoryInfo(Environment.CurrentDirectory);
             var ingredientFiles = currentDirectory.GetFiles();
@@ -68,7 +74,7 @@ namespace  ChefManager
                 } while (descriptionIndex < ingredientData.Length);
             }
         }
-        public static string GetIngredientNames(List<IngredientInfo> list)
+      public static string GetIngredientNames(List<IngredientInfo> list)
         {
             string target = "";
             int index = 0;
@@ -82,8 +88,8 @@ namespace  ChefManager
         }
       
         //Front End Reliant
-        public void ModifyIngredient(List<IngredientInfo> list)
-        {
+      private void ModifyIngredient(List<IngredientInfo> list)
+       {
             if (list.Count == 0)
                 return;
             
@@ -122,7 +128,7 @@ namespace  ChefManager
 
 
         }
-        public void AddIngredient(List<IngredientInfo>list)
+      private void AddIngredient(List<IngredientInfo>list)
         {
             var newIngredient = new IngredientInfo();
             
@@ -154,8 +160,8 @@ namespace  ChefManager
             list.Add(newIngredient);
             
         }
-        public void DeleteIngredient(List<IngredientInfo> list)
-        {
+      private void DeleteIngredient(List<IngredientInfo> list)
+      {
             ViewIngredientList(list);
             Console.Write("Write The Number of the Ingredient you Wish to Delete:");
             int answer = -1;
@@ -172,8 +178,8 @@ namespace  ChefManager
             
             if (validAnswer == "yes" || validAnswer == "Yes")
                 list.RemoveAt(answer);
-        }
-        public void ViewIngredientDetails(List<IngredientInfo> list)
+      }
+      private void ViewIngredientDetails(List<IngredientInfo> list)
         {
             if (list.Count == 0)
                 return;
@@ -203,7 +209,7 @@ namespace  ChefManager
 
             
         }
-        public void ViewIngredientList(List<IngredientInfo> list)
+      private void ViewIngredientList(List<IngredientInfo> list)
         {
             foreach (var ingredient in list)
             {
@@ -211,8 +217,7 @@ namespace  ChefManager
                 Console.WriteLine(index+") "+ ingredient.Name);
             }
         } 
-        
-        private void Tutorial(List<IngredientInfo> ingredientList)
+      private  static void Tutorial(List<IngredientInfo> ingredientList)
         {
             var imanager = new IngredientManagerMethods();
 
@@ -285,7 +290,7 @@ namespace  ChefManager
                               "Now Press any key to go to Main Menu");
             Console.ReadKey();
         }
-        public  int MainMenu()
+      public  int MainMenu()
         {
             bool isANumber = false;
             int answerRead;
@@ -302,10 +307,9 @@ namespace  ChefManager
                 isANumber = int.TryParse(Console.ReadLine(), out answerRead);
 
             } while (!isANumber && (answerRead < 0 || answerRead > 4));
-
             return answerRead;
         }
-        public  int Action(int answer, List<IngredientInfo> ingredientList)
+      public  int Action(int answer, List<IngredientInfo> ingredientList)
         { 
             switch (answer)
             {
@@ -316,7 +320,6 @@ namespace  ChefManager
                     Console.ReadKey();
                     break;
                 }
-
                 case 2:
                 {
                     DeleteIngredient(ingredientList);
@@ -324,7 +327,6 @@ namespace  ChefManager
                     Console.ReadKey();
                     break;
                 }
-
                 case 3:
                 {
                     ModifyIngredient(ingredientList);
@@ -332,7 +334,6 @@ namespace  ChefManager
                     Console.ReadKey();
                     break;
                 }
-
                 case 4:
                 {
                     ViewIngredientDetails(ingredientList);
@@ -340,7 +341,6 @@ namespace  ChefManager
                     Console.ReadKey();
                     break;
                 }
-
                 default:
                 {
                     answer = -1;

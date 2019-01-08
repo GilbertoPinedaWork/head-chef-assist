@@ -9,7 +9,7 @@ using System.Security.Cryptography;
 using ChefManager;
 
 [TestFixture]
-public class ReadIngredientFromFileTest
+public class ReadIngredientFromFileTest: IngredientManagerMethods
 {
    
      private readonly string  workingDir = Environment.CurrentDirectory;
