@@ -9,10 +9,8 @@ namespace ChefManager.UnitTests.GenericManagerMethods
        [Test]
        public void ReceiveInteger()
        {
-           var classBeingTested = new ChefManager.GenericManagerMethods();
            const string input = "0";
-
-           var output = classBeingTested.NumberOnlyInput(input);
+           var output = GM_Methods.NumberOnlyInput(input);
            
            Assert.AreEqual(0,output);
        }
@@ -20,10 +18,8 @@ namespace ChefManager.UnitTests.GenericManagerMethods
        [Test]
        public void ReceiveFloat()
        {
-           var classBeingTested = new ChefManager.GenericManagerMethods();
            const string input = "1.1";
-           
-           var output = classBeingTested.NumberOnlyInput(input);
+           var output = GM_Methods.NumberOnlyInput(input);
            
            Assert.AreEqual(-1,output);
        }
@@ -31,10 +27,8 @@ namespace ChefManager.UnitTests.GenericManagerMethods
        [Test]
        public void ReceiveLetters()
        {
-           var classBeingTested = new ChefManager.GenericManagerMethods();
            const string input = "test";
-           
-           var output = classBeingTested.NumberOnlyInput(input);
+           var output = GM_Methods.NumberOnlyInput(input);
            
            Assert.AreEqual(-1,output);
        }
@@ -42,10 +36,8 @@ namespace ChefManager.UnitTests.GenericManagerMethods
        [Test]
        public void ReceiveEmptyString()
        {
-           var classBeingTested = new ChefManager.GenericManagerMethods();
            const string input = "";
-           
-           var output = classBeingTested.NumberOnlyInput(input);
+           var output =GM_Methods.NumberOnlyInput(input);
            
            Assert.AreEqual(-1,output);
        }
@@ -53,10 +45,10 @@ namespace ChefManager.UnitTests.GenericManagerMethods
        [Test]
        public void ReceiveNull()
        {
-           var classBeingTested = new ChefManager.GenericManagerMethods();
+           var classBeingTested = new ChefManager.GM_Methods();
            const string input = null;
            
-           var output = classBeingTested.NumberOnlyInput(input);
+           var output = GM_Methods.NumberOnlyInput(input);
            
            Assert.AreEqual(-1,output);
        }

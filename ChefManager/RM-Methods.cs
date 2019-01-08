@@ -5,7 +5,7 @@ using System.CodeDom.Compiler;
 
 namespace ChefManager
 {
-    public class RecipeManagerMethods : GenericManagerMethods
+    public class RecipeManagerMethods : GM_Methods
     {
         //Teamo
 

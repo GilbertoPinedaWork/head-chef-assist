@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\pined\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_ChefManager.1377356502.00" t="ExcludeRecursive" />
+    <e p="C:\Users\pined\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\pined\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_ChefManager.1377356502.00" t="ExcludeRecursive" />
     <e p="C:\Users\pined\Documents\repos\Head-Chef\head-chef-assist\ChefManager" t="IncludeRecursive">
       <e p="bin" t="ExcludeRecursive" />
       <e p="ChefManager.csproj" t="IncludeRecursive" />
       <e p="ChefManager.sln" t="IncludeFlat" />
-      <e p="GenericManagerMethods.cs" t="Include" />
-      <e p="IngredientInfo.cs" t="Include" />
-      <e p="IngredientManagerMethods.cs" t="Include" />
+      <e p="GM-Methods.cs" t="Include" />
+      <e p="IM_IngredientInfo.cs" t="Include" />
+      <e p="IM_IngredientLoader.cs" t="Include" />
+      <e p="IM_IngredientModifier.cs" t="Include" />
+      <e p="IM_PublicInterface.cs" t="Include" />
       <e p="MainPrograms.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
@@ -18,17 +21,15 @@
         <e p="AssemblyInfo.cs" t="Include" />
       </e>
       <e p="RecipeInfo.cs" t="Include" />
-      <e p="RecipeManagerMethodscs.cs" t="Include" />
+      <e p="RM-Methods.cs" t="Include" />
       <e p="UnitTests" t="Include">
         <e p="GenericManagerMethods" t="Include">
           <e p="NumberOnlyInputTest.cs" t="Include" />
         </e>
         <e p="IngredientInfo" t="Include">
-          <e p="GetIngredientNames.cs" t="Include" />
-          <e p="IngredientListToFile.cs" t="Include" />
-          <e p="IngredientToFile.cs" t="Include" />
-          <e p="ReadIngredientFromFile.cs" t="Include" />
-          <e p="SetDescription.cs" t="Include" />
+          <e p="LoadFromFiles.cs" t="Include" />
+          <e p="ToFile.cs" t="Include" />
+          <e p="ToFiles.cs" t="Include" />
         </e>
       </e>
     </e>
