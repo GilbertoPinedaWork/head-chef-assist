@@ -5,11 +5,9 @@ namespace ChefManager
 {
     public class IM_PublicInterface
     {
-        public static int MainMenu(List<IngredientInfo> ingredientList)
+        public static int ActionSelection(List<IngredientInfo> ingredientList)
         {
-            bool isANumber = false;
             int answerRead;
-            
             do
             {
                 Console.Clear();
@@ -20,10 +18,9 @@ namespace ChefManager
                 Console.WriteLine("3 = Modify An Existing Ingredient\n4 = View Ingredients\n0 = Save & Exit");
                 Console.Write("Answer : ");
 
-                isANumber = int.TryParse(Console.ReadLine(), out answerRead);
+                answerRead = GM_Methods.NumberOnlyInput(Console.ReadLine(), 3);
 
-            } while (!isANumber && (answerRead < 0 || answerRead > 4));
-            
+            } while (answerRead>0);
             IM_Modifier.Action(answerRead,ingredientList);
             return answerRead;
         }

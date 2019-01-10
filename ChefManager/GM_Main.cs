@@ -5,26 +5,22 @@ using System.Linq;
 
 namespace ChefManager
 {
-
-    public class MainPrograms
+    public class GM_Main
     {
         //TODO ENCRYPTION
         // TODO Refactor
         //TODO  Check For File Existence,
-        public void IngredientManagerMain()
+        public static void IM_Main()
         {
-            var iManager = new IM_IngredientLoader();
-          
-           
-
-            int answer = -1;
+            var iLoader = new IM_IngredientLoader();
+            var answer = 1;
             do
             {
-                answer = IM_PublicInterface.MainMenu(iManager.IngredientList);
+                answer = IM_PublicInterface.ActionSelection(iLoader.IngredientList);
                
             } while (answer > 0);
 
-           IM_IngredientLoader.ToFiles(iManager.IngredientList);
+           IM_IngredientLoader.ToFiles(iLoader.IngredientList);
         }
 
         public void RecipeManagerMain()

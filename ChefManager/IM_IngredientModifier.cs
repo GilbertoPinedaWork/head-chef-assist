@@ -46,6 +46,8 @@ namespace  ChefManager
                     ViewIngredientDetails(ingredientList);
                     break;
                 }
+                case 0:
+                    break;
                 default:
                 {
                     return;

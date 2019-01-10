@@ -7,21 +7,15 @@ namespace ChefManager
     {
         public static void Main(string[] args)
         {
-          var mainCaller =  new MainPrograms();
             int input;
             do
             {
-              input = GM_Methods.NumberOnlyInput
-              ("\tWelcome To Chef Manager"+
-               "\n1 = Ingredient Manager" +
-               "\n2 = Recipe Manager"+
-               "\nAnswer: ");
+                input = GM_PublicInterface.ManagerSelection();
                 switch (input)
                 {
                     case 1:
                     {
-                        Console.Clear(); 
-                        mainCaller.IngredientManagerMain();
+                        GM_Main.IM_Main();
                         break;
                     }
                 }
