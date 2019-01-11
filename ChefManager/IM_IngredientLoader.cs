@@ -6,7 +6,7 @@ namespace ChefManager
 {
     public class IM_IngredientLoader
     {
-        public readonly List<IngredientInfo> IngredientList = new List<IngredientInfo>();
+        public  List<IngredientInfo> IngredientList = new List<IngredientInfo>();
 
         public IM_IngredientLoader()
 
@@ -24,6 +24,7 @@ namespace ChefManager
                 string[] ingredientData = File.ReadAllLines(file).
                     SelectMany(s => s.Split('\n')).
                     ToArray();
+               
                 
                 double.TryParse(ingredientData[1], out var cost);
                 double.TryParse(ingredientData[2], out var yield);
