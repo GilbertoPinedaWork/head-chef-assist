@@ -9,30 +9,19 @@ namespace ChefManager
         public readonly List<IngredientInfo> IngredientList = new List<IngredientInfo>();
 
         public IM_IngredientLoader()
+
         {
             LoadFromFiles(IngredientList);
-            using (var veriFile = new StreamReader("IMTutorial.txt"))
-            {
-                if (veriFile.ReadLine() != null)
-                {
-                    //    ReadIngredientsFromFiles(IngredientList);
-                    return;
-                }
-            }
-            using (var writer = new StreamWriter("IMTutorial"))
-            {
-                writer.Write("1");
-            }
-            
-         //TODO   IM_Modifier.Tutorial(IngredientList);
         }
          private static void LoadFromFiles(IList<IngredientInfo> ingredientList)
-        {
-            var currentDirectory = new DirectoryInfo(Environment.CurrentDirectory);
-            var ingredientFiles = currentDirectory.GetFiles();
+         {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Ingredients";
+            GM_Methods.MakeSureFolderExist(path);
+            var ingredientFiles = Directory.GetFiles(path);
+            
             foreach (var file in ingredientFiles)
             {
-                string[] ingredientData = File.ReadAllLines(file.Name).
+                string[] ingredientData = File.ReadAllLines(file).
                     SelectMany(s => s.Split('\n')).
                     ToArray();
                 
@@ -45,7 +34,7 @@ namespace ChefManager
                     Name = ingredientData[0],
                     Cost = cost,
                     Yield = yield,
-                    MeasurementUnit =ingredientData[3],
+                    MeasurementUnit = ingredientData[3],
                     Quantity = quantity,
                 });
                 var descriptionIndex = 5;
@@ -71,6 +60,7 @@ namespace ChefManager
                  }
              }
          }
-         
+
+        
     }
 }

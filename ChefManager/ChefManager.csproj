@@ -46,10 +46,13 @@
     <Compile Include="GM_Methods.cs" />
     <Compile Include="GM_PublicInterface.cs" />
     <Compile Include="IM_IngredientInfo.cs" />
+    <Compile Include="IM_IngredientInfo_EH.cs" />
     <Compile Include="IM_IngredientLoader.cs" />
+    <Compile Include="IM_IngredientLoader_EH.cs" />
     <Compile Include="IM_PublicInterface.cs" />
     <Compile Include="GM_Main.cs" />
     <Compile Include="IM_IngredientModifier.cs" />
+    <Compile Include="UnitTests\IM_IngredientLoader\ConstructorTest.cs" />
     <Compile Include="_ProgramRoot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecipeInfo.cs" />

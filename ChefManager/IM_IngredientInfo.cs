@@ -16,7 +16,7 @@ namespace ChefManager
        
         public void ToFile()
         {
-            using (var fWriter = new StreamWriter(Name + ".ing"))
+            using (var fWriter = new StreamWriter(Name + ".txt"))
             {
                 fWriter.WriteLine(Name); 
                 fWriter.WriteLine(Cost); 

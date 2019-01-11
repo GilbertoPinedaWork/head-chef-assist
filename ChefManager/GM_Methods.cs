@@ -21,5 +21,12 @@ namespace ChefManager
             return answer;
         }
       
+        public static void MakeSureFolderExist(string path)
+        {
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+        }
     }
 }
