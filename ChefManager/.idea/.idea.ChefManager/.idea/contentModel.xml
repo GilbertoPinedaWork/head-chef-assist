@@ -12,7 +12,9 @@
       <e p="GM_Methods.cs" t="Include" />
       <e p="GM_PublicInterface.cs" t="Include" />
       <e p="IM_IngredientInfo.cs" t="Include" />
+      <e p="IM_IngredientInfo_EH.cs" t="Include" />
       <e p="IM_IngredientLoader.cs" t="Include" />
+      <e p="IM_IngredientLoader_EH.cs" t="Include" />
       <e p="IM_IngredientModifier.cs" t="Include" />
       <e p="IM_PublicInterface.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
@@ -26,6 +28,9 @@
       <e p="UnitTests" t="Include">
         <e p="GenericManagerMethods" t="Include">
           <e p="NumberOnlyInputTest.cs" t="Include" />
+        </e>
+        <e p="IM_IngredientLoader" t="Include">
+          <e p="ConstructorTest.cs" t="Include" />
         </e>
         <e p="IngredientInfo" t="Include">
           <e p="LoadFromFiles.cs" t="Include" />
