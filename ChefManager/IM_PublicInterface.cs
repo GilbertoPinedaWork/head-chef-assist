@@ -15,37 +15,36 @@ namespace ChefManager
                 Console.WriteLine("------------------------------------");
                 Console.WriteLine("What Do You Want To Do?");
                 Console.WriteLine("1 = Add An Ingredient\n2 = Delete An Ingredient");
-                Console.WriteLine("3 = Modify An Existing Ingredient\n4 = View Ingredients\n0 = Save & Exit");
+                Console.WriteLine("3 = Modify An Existing Ingredient\n4 = View Ingredients" +
+                                   "\n0 = Save & Exit");
                 Console.Write("Answer : ");
 
                 answerRead = GM_Methods.NumberOnlyInput(Console.ReadLine(), 3);
-
-            } while (answerRead>0);
+                Console.Clear();
+            } while (answerRead<0);
             IM_Modifier.Action(answerRead,ingredientList);
             return answerRead;
         }
         private static string ISetName()
         {
-            Console.WriteLine("Name:");
+            Console.Write("Name:");
             return Console.ReadLine();
         }
         private static double ISetCost(string currentScreen)
         {
-            double input=0;
-            bool aNumber = false;
+            double input;
             do
             {
                 Console.Clear();
                 Console.WriteLine(currentScreen);
-                Console.WriteLine("Cost:");
-                aNumber = double.TryParse(Console.ReadLine(), out input);
-            } while (aNumber == true);
+                Console.Write("Cost:");
+            } while (double.TryParse(Console.ReadLine(), out input) == false);
 
             return input;
         }
         private static string ISetDescription()
          {
-            Console.WriteLine("Description:");
+            Console.Write("Description:");
             string input = "";
             string temp = "";
             do
@@ -57,7 +56,12 @@ namespace ChefManager
 
           return input;
         }
-        
+
+        private static string ISetUnit()
+        {
+            Console.Write("Unit:");
+            return Console.ReadLine();
+        }
         public static IngredientInfo IAddIngredient()
         {
             Console.WriteLine("Setup New Ingredient: ");
@@ -66,6 +70,7 @@ namespace ChefManager
                 Name = ISetName(), Description = ISetDescription()
             };
             ingredient.Cost = ISetCost("Setup New Ingredient: " + "\nName:" + ingredient.Name);
+            ingredient.MeasurementUnit = ISetUnit();
             return ingredient;
         }
         public static int IDeleteIngredient()

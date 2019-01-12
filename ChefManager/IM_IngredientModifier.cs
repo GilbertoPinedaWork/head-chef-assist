@@ -25,10 +25,10 @@ namespace  ChefManager
             {
                 case 1:
                 {
-                   
-                    IM_PublicInterface.IAddIngredient();
+                    ingredientList.Add(IM_PublicInterface.IAddIngredient());
+                    ingredientList.Sort();
                     break;
-            }
+                }
                 case 2:
                 {
                     IM_PublicInterface.ShowIngredientList(ingredientList);
@@ -46,6 +46,7 @@ namespace  ChefManager
                     ViewIngredientDetails(ingredientList);
                     break;
                 }
+               
                 case 0:
                     break;
                 default:
