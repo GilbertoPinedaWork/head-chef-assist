@@ -33,9 +33,7 @@
           <e p="ConstructorTest.cs" t="Include" />
         </e>
         <e p="IngredientInfo" t="Include">
-          <e p="LoadFromFiles.cs" t="Include" />
           <e p="ToFile.cs" t="Include" />
-          <e p="ToFiles.cs" t="Include" />
         </e>
       </e>
     </e>

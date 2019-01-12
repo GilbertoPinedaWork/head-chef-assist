@@ -7,17 +7,14 @@ namespace ChefManager
     public class IM_IngredientLoader
     {
         public  List<IngredientInfo> IngredientList = new List<IngredientInfo>();
-
-        public IM_IngredientLoader(string path)
-
+        public IM_IngredientLoader(string ingredientFolderPath)
         {
-            LoadFromFiles(IngredientList, path);
+            LoadFromFiles(IngredientList, ingredientFolderPath);
         }
-         private static void LoadFromFiles(IList<IngredientInfo> ingredientList, string path)
+         private static void LoadFromFiles(ICollection<IngredientInfo> ingredientList, string ingredientFolderPath)
          {
-            
-            GM_Methods.MakeSureFolderExist(path);
-            var ingredientFiles = Directory.GetFiles(path);
+            GM_Methods.MakeSureFolderExist(ingredientFolderPath);
+            var ingredientFiles = Directory.GetFiles(ingredientFolderPath);
             
             foreach (var file in ingredientFiles)
             {
