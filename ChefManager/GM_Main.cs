@@ -12,7 +12,7 @@ namespace ChefManager
         //TODO  Check For File Existence,
         public static void IM_Main()
         {
-            var iLoader = new IM_IngredientLoader();
+            var iLoader = new IM_IngredientLoader(Environment.SpecialFolder.MyDocuments.ToString());
             var answer = 1;
             do
             {

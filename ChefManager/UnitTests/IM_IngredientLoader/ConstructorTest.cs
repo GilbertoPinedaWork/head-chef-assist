@@ -11,21 +11,24 @@ public class IM_IngredientLoaderTest
     {
         //Setup
         var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\IngredientsTest";
-        var ingFilePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\IngredientsTest\\Test";
+        var ingFilePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\IngredientsTest\\Test.txt";
         Directory.CreateDirectory(folderPath);
         
-        using (var fwriter = new StreamWriter(ingFilePath))
+        using (var fileWriter = new StreamWriter(ingFilePath))
         {
-            fwriter.WriteLine("Name");
-            fwriter.WriteLine("1.33");
-            fwriter.WriteLine("1.22");
-            fwriter.WriteLine("g");
-            fwriter.WriteLine("1");
-            fwriter.WriteLine("ThisIs\nAMultiline\nDescription");
+            fileWriter.Write("Name" +
+                             "\t1.33" +
+                             "\t1.22" +
+                             "\tg" +
+                             "\t1" +
+                             "\tThisIs" +
+                             "\tAMultiline" +
+                             "\tDescription");
         }
         
         //Test
-        var loader = new IM_IngredientLoader();
+        var loader = new IM_IngredientLoader(folderPath);
+        
        Assert.AreEqual("Name", loader.IngredientList[0].Name);
        Assert.AreEqual(1.33,loader.IngredientList[0].Cost);
        Assert.AreEqual("ThisIsAMultilineDescription",loader.IngredientList[0].Description);

@@ -6,24 +6,25 @@ namespace ChefManager
 {
     public class IM_IngredientLoader
     {
-        public readonly List<IngredientInfo> IngredientList = new List<IngredientInfo>();
+        public  List<IngredientInfo> IngredientList = new List<IngredientInfo>();
 
-        public IM_IngredientLoader()
+        public IM_IngredientLoader(string path)
 
         {
-            LoadFromFiles(IngredientList);
+            LoadFromFiles(IngredientList, path);
         }
-         private static void LoadFromFiles(IList<IngredientInfo> ingredientList)
+         private static void LoadFromFiles(IList<IngredientInfo> ingredientList, string path)
          {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Ingredients";
+            
             GM_Methods.MakeSureFolderExist(path);
             var ingredientFiles = Directory.GetFiles(path);
             
             foreach (var file in ingredientFiles)
             {
                 string[] ingredientData = File.ReadAllLines(file).
-                    SelectMany(s => s.Split('\n')).
+                    SelectMany(s => s.Split('\t')).
                     ToArray();
+               
                 
                 double.TryParse(ingredientData[1], out var cost);
                 double.TryParse(ingredientData[2], out var yield);
@@ -40,7 +41,7 @@ namespace ChefManager
                 var descriptionIndex = 5;
                 do
                 {
-                    ingredientList[0].Description += ingredientData[descriptionIndex];
+                    ingredientList.Last().Description += ingredientData[descriptionIndex];
                     descriptionIndex++;
                 } while (descriptionIndex < ingredientData.Length);
             }

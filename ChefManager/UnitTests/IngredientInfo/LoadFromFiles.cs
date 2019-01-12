@@ -26,7 +26,7 @@ public class ReadIngredientFromFileTest: IM_Modifier
             file.Write("Goal\n6\n0.4\ng\n1\nfresh goal");
         }
 
-        var imanager = new IM_IngredientLoader();
+        var imanager = new IM_IngredientLoader(testFolder.ToString());
         var ingredientList = imanager.IngredientList.ToList();
        
 
