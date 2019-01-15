@@ -5,12 +5,11 @@ using System.Linq;
 
 namespace ChefManager
 {
-    public class IngredientInfo
-    {
+    public class IngredientInfo{
         public string Name { get; set; }
         public double Cost { get; set; }
         public double Yield { get; set; }
-        public string MeasurementUnit { get; set; }
+        public string Unit { get; set; }
         public int Quantity { get; set; }
         public string Description { get; set; }
        
@@ -21,7 +20,7 @@ namespace ChefManager
                 fWriter.Write(Name + "\t" +
                               Cost + "\t" +
                               Yield + "\t" +
-                              MeasurementUnit + "\t" +
+                              Unit + "\t" +
                               Description);
             }
         }

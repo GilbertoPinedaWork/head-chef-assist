@@ -32,7 +32,7 @@ namespace ChefManager
                     Name = ingredientData[0],
                     Cost = cost,
                     Yield = yield,
-                    MeasurementUnit = ingredientData[3],
+                    Unit = ingredientData[3],
                     Quantity = quantity,
                 });
                 var descriptionIndex = 5;
@@ -52,7 +52,7 @@ namespace ChefManager
                      fWriter.WriteLine(ingredient.Name); 
                      fWriter.WriteLine(ingredient.Cost); 
                      fWriter.WriteLine(ingredient.Yield);  
-                     fWriter.WriteLine(ingredient.MeasurementUnit);   
+                     fWriter.WriteLine(ingredient.Unit);   
                      fWriter.WriteLine(ingredient.Quantity); 
                      fWriter.WriteLine(ingredient.Description);  
                  }

@@ -16,7 +16,7 @@ public class IngredientToFileTest
             Name = "Coal",
             Description = "A Fresh Coal",
             Yield = .3,
-            MeasurementUnit = "g",
+            Unit = "g",
             Quantity = 1
         };
 

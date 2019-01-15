@@ -8,7 +8,7 @@ namespace ChefManager
     public class GM_Main
     {
         //TODO ENCRYPTION
-        // TODO Refactor
+        //TODO Refactor
         //TODO  Check For File Existence,
         public static void IM_Main()
         {
