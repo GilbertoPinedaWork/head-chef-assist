@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ChefManager
 {
-    public class GM_Main
+    public sealed class GM_Main
     {
         //TODO ENCRYPTION
         //TODO Refactor

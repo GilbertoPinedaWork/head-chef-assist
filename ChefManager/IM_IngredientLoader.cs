@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 namespace ChefManager
 {
-    public class IM_IngredientLoader
+    public sealed class IM_IngredientLoader
     {
         public  List<IngredientInfo> IngredientList = new List<IngredientInfo>();
         public IM_IngredientLoader(string ingredientFolderPath)
@@ -38,7 +38,8 @@ namespace ChefManager
                 var descriptionIndex = 5;
                 do
                 {
-                    ingredientList.Last().Description += ingredientData[descriptionIndex];
+                    IngredientInfo ingredient = ingredientList.Last();
+                    ingredient.Description += ingredientData[descriptionIndex];
                     descriptionIndex++;
                 } while (descriptionIndex < ingredientData.Length);
             }

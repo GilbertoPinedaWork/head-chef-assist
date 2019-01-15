@@ -2,7 +2,7 @@ using System;
 
 namespace ChefManager
 {
-    public class GM_PublicInterface
+    public sealed class GM_PublicInterface
     {
         public static int ManagerSelection()
         {
@@ -14,6 +14,11 @@ namespace ChefManager
                 Console.Write("\nChoose Your Manager: ");
               
                 return GM_Methods.NumberOnlyInput(Console.ReadLine(),2);
+        }
+        public static string GetInput(string message)
+        {
+            Console.WriteLine(message);
+            return Console.ReadLine();
         }
     }
 }

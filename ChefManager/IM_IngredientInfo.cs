@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ChefManager
 {
-    public class IngredientInfo{
+    public struct IngredientInfo{
         public string Name { get; set; }
         public double Cost { get; set; }
         public double Yield { get; set; }

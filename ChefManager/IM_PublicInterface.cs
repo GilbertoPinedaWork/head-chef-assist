@@ -4,10 +4,8 @@ using System.Runtime.InteropServices;
 
 namespace ChefManager
 {
-    public class IM_PublicInterface
+    public sealed class IM_PublicInterface
     {
-
-       
         public static int ActionSelection(List<IngredientInfo> ingredientList)
         {
             int answerRead;
@@ -22,7 +20,7 @@ namespace ChefManager
                 Console.WriteLine( "\n0 = Save & Exit");
                 Console.Write("Answer : ");
 
-                answerRead = GM_Methods.NumberOnlyInput(Console.ReadLine(), 3);
+                answerRead = GM_Methods.NumberOnlyInput(Console.ReadLine(), 4);
                 Console.Clear();
                 
             } while (answerRead<0);
@@ -30,7 +28,7 @@ namespace ChefManager
             IM_Modifier.Action(answerRead,ingredientList);
             return answerRead;
         }
-        private static string InputName()
+        public static string InputName()
         {
             string input;
             do
@@ -43,36 +41,31 @@ namespace ChefManager
 
             return input;
         }
-        private static double InputCost(string currentScreen)
+        public static double InputCost()
         {
             double input;
             do
             {
                 Console.Clear();
-                Console.WriteLine(currentScreen);
                 Console.Write("Cost:");
                 input = GM_Methods.DecimalOnlyInput(Console.ReadLine());
                 
             } while ( input < 0.009);
-
             return input;
         }
-
-        private static double InputYield(string currentScreen)
+        public static double InputYield()
         {
             double input;
             do
             {
                 Console.Clear();
-                Console.WriteLine(currentScreen);
-                Console.Write("Yield:");
                 input = GM_Methods.DecimalOnlyInput(Console.ReadLine());
                 
             } while ( input < 0.009);
 
             return input;
         }
-        private static string InputDescription()
+        public static string InputDescription()
          {
             Console.Write("Description:");
             string input = "";
@@ -83,61 +76,37 @@ namespace ChefManager
               temp = Console.ReadLine();
               temp = $"{temp} \n";
 
-            } while (temp != "\n");
+            } while (temp != $" \n");
 
           return input;
         }
-        private static string InputUnit(string screen)
+        public static string InputUnit()
         {
             string input;
             do
             {
                 Console.Clear();
-                Console.Write($"{screen} \nUnit:");
+                Console.Write($"\nUnit:");
                 input = GM_Methods.WordFirstInput(Console.ReadLine());
             } while (input=="");
 
             return input;
         }
         //TODO SEParate input from setting
-        public static IngredientInfo InputAddIngredientProperties(bool modify = false)
-        {
-           
-            var screenString = modify ? "Modify Ingredient" : "Create Ingredient:";
-            Console.WriteLine(screenString);
-            
-            var ingredient = new IngredientInfo
-            {
-                Name = InputName(), Description = InputDescription()
-            };
-            
-            screenString = $"{screenString}\nName: {ingredient.Name} \n Description {ingredient.Description}";
-            ingredient.Cost = InputCost(screenString);
-            
-            screenString = $"{screenString} Cost: {ingredient.Cost}";
-            ingredient.Unit = InputUnit(screenString);
-            
-            return ingredient;
-        }
-        private static string GetInput(string message)
-        {
-            Console.WriteLine(message);
-            return Console.ReadLine();
-        }
+       
         public static string InputDeleteIngredient()
         {
-           return GetInput("Write The Number of The Ingredient You Wish To Delete : ");
+           return GM_PublicInterface.GetInput("Write The Number of The Ingredient You Wish To Delete : ");
         }
         public static string InputModifyIngredient()
         {
-            return GetInput("Write The Number of The Ingredient You Wish To Modify : ");
+            return GM_PublicInterface.GetInput("Write The Number of The Ingredient You Wish To Modify : ");
         }
         public static string InputShowIngredient()
         {
             Console.WriteLine("Write The Number of The Ingredient's Details You Wish To See : ");
             return Console.ReadLine();
         }
-
         public  static void ShowIngredientDetails(IngredientInfo ingredient)
         {
             Console.Clear();
@@ -158,5 +127,5 @@ namespace ChefManager
             }
         } 
         
-    }
+     }
 }
