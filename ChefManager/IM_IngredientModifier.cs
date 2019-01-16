@@ -65,8 +65,8 @@ namespace  ChefManager
                 
                   string ingredientId = IM_PublicInterface.InputModifyIngredient();
                   int id = GM_Methods.NumberOnlyInput(ingredientId,ingredientList.Count-1) -1;
-
-                 
+                  ingredientList[id] = SetIngredientInfo(ingredientList[id]);
+                  ingredientList[id].ToFile();
                   break;
               }
               case 4:
