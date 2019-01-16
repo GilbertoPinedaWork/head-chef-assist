@@ -57,6 +57,7 @@ namespace ChefManager
             do
             {
                 Console.Clear();
+                Console.Write("Yield:");
                 input = GM_Methods.DecimalOnlyInput(Console.ReadLine());
                 
             } while ( input < 0.009);
@@ -65,6 +66,7 @@ namespace ChefManager
         }
         public static string InputDescription()
          {
+            Console.Clear();
             Console.Write("Description:");
             string input = "";
             string temp = "";
@@ -72,9 +74,9 @@ namespace ChefManager
             {
               input =$"{input} {temp}";
               temp = Console.ReadLine();
-              temp = $"{temp} \n";
+              temp = $"{temp}\n";
 
-            } while (temp != $" \n");
+            } while (temp != "\n");
 
           return input;
         }
@@ -84,7 +86,7 @@ namespace ChefManager
             do
             {
                 Console.Clear();
-                Console.Write($"\nUnit:");
+                Console.Write("Unit:");
                 input = GM_Methods.WordFirstInput(Console.ReadLine());
             } while (input=="");
 
