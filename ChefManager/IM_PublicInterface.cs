@@ -6,7 +6,7 @@ namespace ChefManager
 {
     public sealed class IM_PublicInterface
     {
-        public static int ActionSelection(List<IngredientInfo> ingredientList)
+        public static int ActionSelection()
         {
             int answerRead;
             do
@@ -24,8 +24,6 @@ namespace ChefManager
                 Console.Clear();
                 
             } while (answerRead<0);
-            
-            IM_Modifier.Action(answerRead,ingredientList);
             return answerRead;
         }
         public static string InputName()
@@ -96,11 +94,11 @@ namespace ChefManager
        
         public static string InputDeleteIngredient()
         {
-           return GM_PublicInterface.GetInput("Write The Number of The Ingredient You Wish To Delete : ");
+           return GM_Methods.GetInput("Write The Number of The Ingredient You Wish To Delete : ");
         }
         public static string InputModifyIngredient()
         {
-            return GM_PublicInterface.GetInput("Write The Number of The Ingredient You Wish To Modify : ");
+            return GM_Methods.GetInput("Write The Number of The Ingredient You Wish To Modify : ");
         }
         public static string InputShowIngredient()
         {
