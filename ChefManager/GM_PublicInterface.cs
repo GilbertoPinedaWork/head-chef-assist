@@ -15,10 +15,6 @@ namespace ChefManager
               
                 return GM_Methods.NumberOnlyInput(Console.ReadLine(),2);
         }
-        public static string GetInput(string message)
-        {
-            Console.WriteLine(message);
-            return Console.ReadLine();
-        }
+        
     }
 }
