@@ -11,7 +11,7 @@ public class IngredientToFileTest
     public void Default_Ingredient_Received()
     {
        
-        var ingredient = new IngredientInfo
+        var ingredient = new Ingredient
         {   Cost = 5,
             Name = "Coal",
             Description = "A Fresh Coal",

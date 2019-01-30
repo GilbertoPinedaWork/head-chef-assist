@@ -107,7 +107,7 @@ namespace ChefManager
             Console.WriteLine("Write The Number of The Ingredient's Details You Wish To See : ");
             return Console.ReadLine();
         }
-        public  static void ShowIngredientDetails(IngredientInfo ingredient)
+        public  static void ShowIngredientDetails(Ingredient ingredient)
         {
             Console.Clear();
             Console.WriteLine("Ingredient Details");
@@ -117,7 +117,7 @@ namespace ChefManager
             Console.WriteLine($"Yield: {ingredient.Yield}%");
             Console.WriteLine($"Unit: {ingredient.Unit}" );
         }
-        public static void ShowListOnScreen(IList<IngredientInfo> list)
+        public static void ShowListOnScreen(IList<Ingredient> list)
         {
             Console.WriteLine("Ingredient List: ");
             foreach (var ingredient in list)

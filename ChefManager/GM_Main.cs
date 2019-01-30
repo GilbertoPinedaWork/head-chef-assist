@@ -15,12 +15,12 @@ namespace ChefManager
             int answer;
             do
             {
-                var iLoader = new IM_IngredientLoader($"{Environment.SpecialFolder.MyDocuments.ToString()}\\Ingredients");
+                var iLoader = new IM_Loader($"{Environment.SpecialFolder.MyDocuments.ToString()}\\Ingredients");
                 answer = IM_PublicInterface.ActionSelection();
 
-                IM_Modifier.Action(answer, iLoader.IngredientList);
-                IM_IngredientLoader.ToFiles(iLoader.IngredientList);
-            } while (answer < 0);
+                IM_Modifier.Action(answer, ref iLoader.IngredientList);
+                IM_Loader.ToFiles(iLoader.IngredientList);
+            } while (answer > 0);
         }
 
         public void RecipeManagerMain()

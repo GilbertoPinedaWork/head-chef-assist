@@ -6,7 +6,7 @@ using System.Xml.Schema;
 
 namespace ChefManager
 {
-    public struct IngredientInfo{
+    public struct Ingredient{
         public string Name { get; set; }
         public double Cost { get; set; }
         public double Yield { get; set; }

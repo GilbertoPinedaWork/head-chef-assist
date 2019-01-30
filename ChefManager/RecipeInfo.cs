@@ -8,11 +8,11 @@ namespace ChefManager
         public string Name { get; set; }
         public int Servings { get; set; }
         public string Procedure { get; set;}
-        public List<IngredientInfo> IngredientList { get; set; }       
+        public List<Ingredient> IngredientList { get; set; }       
        
        
         
-        private double  GetRecipeCost(List<IngredientInfo> ingredientList )
+        private double  GetRecipeCost(List<Ingredient> ingredientList )
         {
             double cost = 0.0;
             foreach (var ingredient in ingredientList)
