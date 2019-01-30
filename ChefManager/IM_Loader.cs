@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 namespace ChefManager
@@ -46,11 +47,13 @@ namespace ChefManager
 
             return ingredientList;
          }
-         public static void ToFiles(IEnumerable<Ingredient> ingredientList)
+         public static void ToFiles(IEnumerable<Ingredient> ingredientList, string folderPath)
          {
+             string previous = Directory.GetCurrentDirectory();
+             Directory.SetCurrentDirectory(folderPath);
              foreach (var ingredient in ingredientList)
              {
-                 using (var fWriter = new StreamWriter(ingredient.Name + ".ing"))
+                 using (var fWriter = new StreamWriter(ingredient.Name + ".txt"))
                  {
                      fWriter.WriteLine(ingredient.Name); 
                      fWriter.WriteLine(ingredient.Cost); 
@@ -60,6 +63,7 @@ namespace ChefManager
                      fWriter.WriteLine(ingredient.Description);  
                  }
              }
+             Directory.SetCurrentDirectory(folderPath);
          }
 
     }

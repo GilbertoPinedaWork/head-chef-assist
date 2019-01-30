@@ -19,7 +19,8 @@ namespace ChefManager
                 answer = IM_PublicInterface.ActionSelection();
 
                 IM_Modifier.Action(answer, ref iLoader.IngredientList);
-                IM_Loader.ToFiles(iLoader.IngredientList);
+                
+                IM_Loader.ToFiles(iLoader.IngredientList, $"{Environment.SpecialFolder.MyDocuments.ToString()}\\Ingredients");
             } while (answer > 0);
         }
 
