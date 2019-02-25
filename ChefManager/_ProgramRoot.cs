@@ -17,9 +17,13 @@ namespace ChefManager
                     {
                         GM_Main.IM_Main();
                         break;
-                    } 
+                    }
+                    case 2:
+                    {
+                        break;
+                    }
                 }
-            } while (input!=0);
+            } while (input < 0 || input > 2);
         }
     }
 }

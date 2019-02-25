@@ -1,33 +1,27 @@
 using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace ChefManager
 {
     public sealed class GM_Main
     {
-        //TODO ENCRYPTION
-        //TODO Exception Handling, 
         //TODO Delete old ingredientfile after modifying it since it will create a new file
         public static void IM_Main()
         {
-            int answer;
+            const int maxOption = 4;
+            int answerSelected;
+            var ingredientFolderPath = $"{Environment.SpecialFolder.MyDocuments.ToString()}\\Ingredients";
             do
             {
-                var iLoader = new IM_Loader($"{Environment.SpecialFolder.MyDocuments.ToString()}\\Ingredients");
-                Console.Write(iLoader.IngredientList.Count);
-                Console.ReadLine();
-                answer = IM_PublicInterface.ActionSelection();
+                var ingredientLoader = new IM_Loader(ingredientFolderPath);
+                answerSelected = IM_PublicInterface.ActionSelection();
 
-                iLoader.IngredientList=
-                IM_Modifier.Action(answer, ref iLoader.IngredientList);
-                
-                IM_Loader.ToFiles(iLoader.IngredientList, $"{Environment.SpecialFolder.MyDocuments.ToString()}\\Ingredients");
-            } while (answer > 0);
+                //TODO decide return or reference
+                ingredientLoader.IngredientList = IM_Modifier.Action(answerSelected, ingredientLoader.IngredientList);
+                IM_Loader.LoadToFiles(ingredientLoader.IngredientList, ingredientFolderPath);
+            } while (answerSelected > 0 && answerSelected < maxOption + 1);
         }
 
-        public void RecipeManagerMain()
+        public static void RM_Main()
         {
             var recipe = new RecipeInfo();
         }
