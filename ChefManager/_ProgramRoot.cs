@@ -23,7 +23,7 @@ namespace ChefManager
                         break;
                     }
                 }
-            } while (input < 0 || input > 2);
+            } while (input !=0);
         }
     }
 }

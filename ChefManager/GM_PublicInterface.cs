@@ -8,10 +8,14 @@ namespace ChefManager
         {
             Console.Clear();
             Console.WriteLine("Welcome To your Chef Assistant\n" +
-                              "\n1=Ingredient Manager" + "\n2=RecipeManager" +
-                              "\n0=Exit");
+                              "=============================="+
+                              "\n\tMain Menu"+
+                              "\n1 = Ingredient Manager" +
+                              "\n2 = RecipeManager" +
+                              "\n0 = Exit"+
+                              "\n==============================");
 
-            Console.Write("\nChoose Your Manager: ");
+            Console.Write("Choose Your Manager: ");
 
             return GM_Methods.NumberOnlyInput(Console.ReadLine(), 2);
         }
