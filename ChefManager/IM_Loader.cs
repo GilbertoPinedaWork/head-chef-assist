@@ -17,7 +17,7 @@ namespace ChefManager
             
             GM_Methods.MakeSureFolderExist(ingredientFolderPath);
             var ingredientFiles = Directory.GetFiles(ingredientFolderPath);
-            
+            if (ingredientFiles.Length <= 0) return ingredientList;
             foreach (var file in ingredientFiles)
             {
                 string[] ingredientData = File.ReadAllLines(file).
@@ -51,6 +51,7 @@ namespace ChefManager
          {
              string previous = Directory.GetCurrentDirectory();
              Directory.SetCurrentDirectory(folderPath);
+             
              foreach (var ingredient in ingredientList)
              {
                  using (var fWriter = new StreamWriter(ingredient.Name + ".txt"))
@@ -63,7 +64,7 @@ namespace ChefManager
                      fWriter.WriteLine(ingredient.Description);  
                  }
              }
-             Directory.SetCurrentDirectory(folderPath);
+             Directory.SetCurrentDirectory(previous);
          }
 
     }

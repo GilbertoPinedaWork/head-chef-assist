@@ -16,8 +16,11 @@ namespace ChefManager
             do
             {
                 var iLoader = new IM_Loader($"{Environment.SpecialFolder.MyDocuments.ToString()}\\Ingredients");
+                Console.Write(iLoader.IngredientList.Count);
+                Console.ReadLine();
                 answer = IM_PublicInterface.ActionSelection();
 
+                iLoader.IngredientList=
                 IM_Modifier.Action(answer, ref iLoader.IngredientList);
                 
                 IM_Loader.ToFiles(iLoader.IngredientList, $"{Environment.SpecialFolder.MyDocuments.ToString()}\\Ingredients");

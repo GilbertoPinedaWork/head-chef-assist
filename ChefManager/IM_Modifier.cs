@@ -33,7 +33,7 @@ namespace  ChefManager
         SetYield(ref ingredient);
         
       }
-      public static void Action(int answer, ref List<Ingredient> ingredientList)
+      public static List<Ingredient> Action(int answer, ref List<Ingredient> ingredientList)
       { 
           switch (answer)
           {
@@ -50,7 +50,7 @@ namespace  ChefManager
                   IM_PublicInterface.ShowListOnScreen(ingredientList);
                 
                   string ingredientId = IM_PublicInterface.InputDeleteIngredient();
-                  int id = GM_Methods.NumberOnlyInput(ingredientId,ingredientList.Count-1) -1;
+                  int id = GM_Methods.NumberOnlyInput(ingredientId,ingredientList.Count-1)-1;
                 
                   DeleteIngredient(ingredientList,id);
                   break;
@@ -71,20 +71,28 @@ namespace  ChefManager
               {
                   IM_PublicInterface.ShowListOnScreen(ingredientList);
                  
-                  string ingredientId = IM_PublicInterface.InputShowIngredient();
-                  int id = GM_Methods.NumberOnlyInput(ingredientId,ingredientList.Count - 1) - 1;
+                  
+                  int id;
+                  do
+                  {
+                      string ingredientId = IM_PublicInterface.InputShowIngredient();
+                      id = GM_Methods.NumberOnlyInput(ingredientId, ingredientList.Count - 1) - 1;
+                      Console.Write(id);
+                  }while(id<0);
+                      
                  
-                  IM_PublicInterface.ShowIngredientDetails(ingredientList[id-1]);
+                  IM_PublicInterface.ShowIngredientDetails(ingredientList[id]);
                   break;
               }
               case 0:
                   break;
               default:
               {
-                  return;
+                  break;
               }
           }
-         
+
+          return ingredientList;
       }
       private static void DeleteIngredient(IList<Ingredient> list,int id)
       {

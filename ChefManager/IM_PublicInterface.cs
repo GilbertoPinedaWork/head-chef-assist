@@ -123,7 +123,7 @@ namespace ChefManager
             foreach (var ingredient in list)
             {
                 var index = list.IndexOf(ingredient); 
-                Console.WriteLine($"{index}) {ingredient.Name}");
+                Console.WriteLine($"{index+1}) {ingredient.Name}");
             }
         } 
         
