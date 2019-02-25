@@ -12,15 +12,19 @@ namespace ChefManager
         //TODO Delete old ingredientfile after modifying it since it will create a new file
         public static void IM_Main()
         {
-            var iLoader = new IM_IngredientLoader(Environment.SpecialFolder.MyDocuments.ToString());
             int answer;
             do
             {
+                var iLoader = new IM_Loader($"{Environment.SpecialFolder.MyDocuments.ToString()}\\Ingredients");
+                Console.Write(iLoader.IngredientList.Count);
+                Console.ReadLine();
                 answer = IM_PublicInterface.ActionSelection();
 
-                IM_Modifier.Action(answer, iLoader.IngredientList);
-                IM_IngredientLoader.ToFiles(iLoader.IngredientList);
-            } while (answer < 0);
+                iLoader.IngredientList=
+                IM_Modifier.Action(answer, ref iLoader.IngredientList);
+                
+                IM_Loader.ToFiles(iLoader.IngredientList, $"{Environment.SpecialFolder.MyDocuments.ToString()}\\Ingredients");
+            } while (answer > 0);
         }
 
         public void RecipeManagerMain()

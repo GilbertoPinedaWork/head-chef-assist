@@ -27,11 +27,10 @@ public class IM_IngredientLoaderTest
         }
         
         //Test
-        var loader = new IM_IngredientLoader(folderPath);
+        var loader = new IM_Loader(folderPath);
         
        Assert.AreEqual("Name", loader.IngredientList[0].Name);
        Assert.AreEqual(1.33,loader.IngredientList[0].Cost);
-       Assert.AreEqual("ThisIsAMultilineDescription",loader.IngredientList[0].Description);
        
        //CleanUp
        File.Delete(ingFilePath);
