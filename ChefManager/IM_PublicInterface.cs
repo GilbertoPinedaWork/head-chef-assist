@@ -12,12 +12,14 @@ namespace ChefManager
             do
             {
                 Console.Clear();
-                Console.WriteLine("Welcome to The Ingredient Managerv1");
-                Console.WriteLine("------------------------------------");
+                Console.WriteLine("   Ingredient Manager Menu");
+                Console.WriteLine("==============================");
                 Console.WriteLine("What Do You Want To Do?");
                 Console.WriteLine("1 = Add An Ingredient\n2 = Delete An Ingredient");
                 Console.WriteLine("3 = Modify An Existing Ingredient\n4 = View Ingredient");
-                Console.WriteLine( "\n0 = Save & Exit");
+                Console.WriteLine( "0 = Save & Go Back To Main Menu");
+                Console.WriteLine("==============================");
+
                 Console.Write("Answer : ");
 
                 answerRead = GM_Methods.NumberOnlyInput(Console.ReadLine(), 4);

@@ -24,8 +24,11 @@
       <e p="RecipeInfo.cs" t="Include" />
       <e p="RM-Methods.cs" t="Include" />
       <e p="UnitTests" t="Include">
-        <e p="GenericManagerMethods" t="Include">
+        <e p="GM_Methods" t="Include">
+          <e p="MakeSureFolderExists.cs" t="Include" />
+          <e p="NumberOnlyInputMinTest.cs" t="Include" />
           <e p="NumberOnlyInputTest.cs" t="Include" />
+          <e p="WordFirstInputTest.cs" t="Include" />
         </e>
         <e p="IM_Loader" t="Include">
           <e p="ConstructorTest.cs" t="Include" />

@@ -50,16 +50,21 @@
     <Compile Include="IM_PublicInterface.cs" />
     <Compile Include="GM_Main.cs" />
     <Compile Include="IM_Modifier.cs" />
+    <Compile Include="UnitTests\GM_Methods\NumberOnlyInputMinTest.cs" />
+    <Compile Include="UnitTests\GM_Methods\WordFirstInputTest.cs" />
     <Compile Include="UnitTests\IM_Loader\ConstructorTest.cs" />
     <Compile Include="_ProgramRoot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecipeInfo.cs" />
     <Compile Include="RM-Methods.cs" />
-    <Compile Include="UnitTests\GenericManagerMethods\NumberOnlyInputTest.cs" />
+    <Compile Include="UnitTests\GM_Methods\NumberOnlyInputTest.cs" />
     <Compile Include="UnitTests\IngredientInfo\ToFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UnitTests\GM_Methods\MakeSureFolderExists.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
