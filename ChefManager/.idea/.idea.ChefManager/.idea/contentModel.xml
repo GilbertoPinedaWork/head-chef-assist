@@ -25,7 +25,7 @@
       <e p="RM-Methods.cs" t="Include" />
       <e p="UnitTests" t="Include">
         <e p="GM_Methods" t="Include">
-          <e p="MakeSureFolderExists.cs" t="Include" />
+          <e p="MakeSureFolderExistsTest.cs" t="Include" />
           <e p="NumberOnlyInputMinTest.cs" t="Include" />
           <e p="NumberOnlyInputTest.cs" t="Include" />
           <e p="WordFirstInputTest.cs" t="Include" />

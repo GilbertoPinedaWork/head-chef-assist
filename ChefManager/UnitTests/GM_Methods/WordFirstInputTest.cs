@@ -10,7 +10,7 @@ public class WordFirstInputTest
         string input = "1L";
         string result = GM_Methods.WordFirstInput(input);
         
-        Assert.AreEqual("", result);
+        Assert.AreEqual(string.Empty, result);
 
     }
     [Test]
